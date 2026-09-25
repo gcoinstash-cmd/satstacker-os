@@ -1135,24 +1135,24 @@ export default function App() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs">
           <div className="flex items-center gap-3">
-            <span className={`px-2 py-0.5 rounded text-[10px] uppercase tracking-wider font-semibold ${
+            <span className={`px-2 py-0.5 rounded text-xs font-semibold tracking-wider uppercase tracking-wider font-semibold ${
               store.activeMode === 'stim' ? 'bg-indigo-600 text-white' : 'bg-zinc-900 text-zinc-400 border border-zinc-800'
             }`}>
               SATSTACKER UTILITY
             </span>
-            <span className={store.activeMode === 'stim' ? 'text-zinc-400' : 'text-zinc-500 font-bold'}>
+            <span className={store.activeMode === 'stim' ? 'text-zinc-400' : 'text-zinc-300 font-bold'}>
               SYSTEM STATUS: <strong className="text-emerald-400">99.98% NODE UPTIME // LATENCY: 14ms</strong>
             </span>
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsAdminOpen(true)}
-              className="text-[10px] font-mono tracking-widest text-indigo-400 hover:text-white border border-indigo-500/40 hover:border-indigo-400 px-2.5 py-0.5 rounded transition-all cursor-pointer bg-indigo-600/10"
+              className="text-xs font-semibold tracking-wider font-mono tracking-widest text-indigo-400 hover:text-white border border-indigo-500/40 hover:border-indigo-400 px-2.5 py-0.5 rounded transition-all cursor-pointer bg-indigo-600/10"
               title="Master Passkey: satstacker2026"
             >
               [ ADMIN PASS ]
             </button>
-            <div className="text-[10px] uppercase tracking-wider text-zinc-500 font-bold">
+            <div className="text-xs font-semibold tracking-wider uppercase tracking-wider text-zinc-300 font-bold">
               Real-Time Market Analytics
             </div>
           </div>
@@ -1179,7 +1179,7 @@ export default function App() {
             <div>
               <div className="flex items-center gap-2">
                 <span className={`font-mono text-[9px] tracking-widest uppercase ${
-                  store.activeMode === 'stim' ? 'text-amber-400' : 'text-zinc-500'
+                  store.activeMode === 'stim' ? 'text-amber-400' : 'text-zinc-300'
                 }`}>
                   SATSTACKER UTILITY • v2.0.4-STABLE
                 </span>
@@ -1191,13 +1191,13 @@ export default function App() {
               }`}>
                 SatStacker
               </h1>
-              <p className={`text-[10px] md:text-[11px] font-mono leading-none font-bold tracking-tight opacity-55 uppercase mb-1.5 ${
+              <p className={`text-xs font-semibold tracking-wider md:text-xs font-semibold font-mono leading-none font-bold tracking-tight opacity-55 uppercase mb-1.5 ${
                 store.activeMode === 'stim' ? 'text-amber-300' : 'text-zinc-400'
               }`}>
                 Professional Bitcoin utility with multi-thread calculation core.
               </p>
               <p className={`text-xs mt-0.5 max-w-lg ${
-                store.activeMode === 'stim' ? 'text-slate-400' : 'text-zinc-500'
+                store.activeMode === 'stim' ? 'text-slate-400' : 'text-zinc-300'
               }`}>
                 Satoshi-to-BTC converter. Optimized with background process threading.
               </p>
@@ -1276,7 +1276,7 @@ export default function App() {
                       </>
                     )}
                   </span>
-                  <span className={`uppercase text-[10px] tracking-tight font-black font-mono ${
+                  <span className={`uppercase text-xs font-semibold tracking-wider tracking-tight font-black font-mono ${
                     store.isAlertArmed && store.connectionStatus === 'connected' && secondsSinceLastTick <= 4
                       ? 'text-indigo-400'
                       : ''
@@ -1295,7 +1295,7 @@ export default function App() {
               </div>
             </div>
             {/* Minimal Inline Grounding Helper Text Block */}
-            <div className="text-[10px] text-zinc-500 font-mono flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5 mt-1 sm:mt-1.5 px-1 select-none pointer-events-none">
+            <div className="text-xs font-semibold tracking-wider text-zinc-300 font-mono flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5 mt-1 sm:mt-1.5 px-1 select-none pointer-events-none">
               <span>⚛ <strong>Symmetry Mode</strong>: strict balance grids</span>
               <span>•</span>
               <span>⚡ <strong>Pulse Mode</strong>: audio indicators & responsive feed</span>
@@ -1319,7 +1319,7 @@ export default function App() {
                     : 'text-indigo-400 font-black'
                   : store.activeMode === 'stim'
                     ? 'text-zinc-400 hover:text-zinc-200'
-                    : 'text-zinc-500 hover:text-zinc-350'
+                    : 'text-zinc-300 hover:text-zinc-350'
               }`}
             >
               <span className="relative z-10">
@@ -1358,7 +1358,7 @@ export default function App() {
                     : 'bg-zinc-900/40 border-zinc-800 rounded-none'
                 }`}>
                   <div className="flex items-center gap-3">
-                    <span className="p-1 px-2.5 rounded bg-indigo-500/10 text-indigo-400 font-bold text-[10px]">
+                    <span className="p-1 px-2.5 rounded bg-indigo-500/10 text-indigo-400 font-bold text-xs font-semibold tracking-wider">
                       {((userHasConverted ? 1 : 0) + (userHasShielded ? 1 : 0) + (userHasCalibrated ? 1 : 0) + (userHasAudited ? 1 : 0) + (userHasExported ? 1 : 0))} / 5 STEPS COMPLETED
                     </span>
                     <span className="text-zinc-400 font-bold">Workspace Orientation Companion is currently minimized.</span>
@@ -1389,7 +1389,7 @@ export default function App() {
                         <span className="p-1 px-2 rounded-md bg-indigo-500/10 text-indigo-400 font-black text-[9px] uppercase tracking-widest">
                           Onboarding Checklist
                         </span>
-                        <span className="text-[10px] text-zinc-500">v2.1-Active</span>
+                        <span className="text-xs font-semibold tracking-wider text-zinc-300">v2.1-Active</span>
                       </div>
                       <h3 className="text-sm font-black uppercase text-zinc-200 mt-1.5 flex items-center gap-2">
                         <HelpCircle size={15} className="text-indigo-400" />
@@ -1455,7 +1455,7 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                          <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">[OP-01]</span>
+                          <span className="text-[9px] font-bold text-zinc-300 uppercase tracking-widest">[OP-01]</span>
                           <span className={`text-[9px] font-black uppercase px-1.5 py-0.2 rounded ${
                             userHasConverted 
                               ? 'bg-emerald-500/10 text-emerald-400' 
@@ -1465,7 +1465,7 @@ export default function App() {
                           </span>
                         </div>
                         <h4 className="text-xs font-black uppercase text-zinc-300">Converter Sync</h4>
-                        <p className="text-[10px] text-zinc-400 mt-1 line-clamp-2">Convert Satoshi fractions to Bitcoin.</p>
+                        <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 line-clamp-2">Convert Satoshi fractions to Bitcoin.</p>
                       </div>
                       <div className="mt-3 text-[9px] text-indigo-400 font-bold uppercase tracking-wider flex items-center justify-between">
                         <span>Details ➔</span>
@@ -1487,7 +1487,7 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                          <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">[OP-02]</span>
+                          <span className="text-[9px] font-bold text-zinc-300 uppercase tracking-widest">[OP-02]</span>
                           <span className={`text-[9px] font-black uppercase px-1.5 py-0.2 rounded ${
                             userHasShielded 
                               ? 'bg-emerald-500/10 text-emerald-400' 
@@ -1497,7 +1497,7 @@ export default function App() {
                           </span>
                         </div>
                         <h4 className="text-xs font-black uppercase text-zinc-300">Streak Protections</h4>
-                        <p className="text-[10px] text-zinc-400 mt-1 line-clamp-2">Arm price alarms & freeze shields.</p>
+                        <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 line-clamp-2">Arm price alarms & freeze shields.</p>
                       </div>
                       <div className="mt-3 text-[9px] text-indigo-400 font-bold uppercase tracking-wider flex items-center justify-between">
                         <span>Details ➔</span>
@@ -1519,7 +1519,7 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                          <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">[OP-03]</span>
+                          <span className="text-[9px] font-bold text-zinc-300 uppercase tracking-widest">[OP-03]</span>
                           <span className={`text-[9px] font-black uppercase px-1.5 py-0.2 rounded ${
                             userHasCalibrated 
                               ? 'bg-emerald-500/10 text-emerald-400' 
@@ -1529,7 +1529,7 @@ export default function App() {
                           </span>
                         </div>
                         <h4 className="text-xs font-black uppercase text-zinc-300">Grid Calibration</h4>
-                        <p className="text-[10px] text-zinc-400 mt-1 line-clamp-2">Align float precision structures.</p>
+                        <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 line-clamp-2">Align float precision structures.</p>
                       </div>
                       <div className="mt-3 text-[9px] text-indigo-400 font-bold uppercase tracking-wider flex items-center justify-between">
                         <span>Details ➔</span>
@@ -1551,7 +1551,7 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                          <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">[OP-04]</span>
+                          <span className="text-[9px] font-bold text-zinc-300 uppercase tracking-widest">[OP-04]</span>
                           <span className={`text-[9px] font-black uppercase px-1.5 py-0.2 rounded ${
                             userHasAudited 
                               ? 'bg-emerald-500/10 text-emerald-400' 
@@ -1561,7 +1561,7 @@ export default function App() {
                           </span>
                         </div>
                         <h4 className="text-xs font-black uppercase text-zinc-300">Ledger Audit</h4>
-                        <p className="text-[10px] text-zinc-400 mt-1 line-clamp-2">Verify signature hash integrity.</p>
+                        <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 line-clamp-2">Verify signature hash integrity.</p>
                       </div>
                       <div className="mt-3 text-[9px] text-indigo-400 font-bold uppercase tracking-wider flex items-center justify-between">
                         <span>Details ➔</span>
@@ -1583,7 +1583,7 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                          <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">[OP-05]</span>
+                          <span className="text-[9px] font-bold text-zinc-300 uppercase tracking-widest">[OP-05]</span>
                           <span className={`text-[9px] font-black uppercase px-1.5 py-0.2 rounded ${
                             userHasExported 
                               ? 'bg-emerald-500/10 text-emerald-400' 
@@ -1593,7 +1593,7 @@ export default function App() {
                           </span>
                         </div>
                         <h4 className="text-xs font-black uppercase text-zinc-300">Registry Export</h4>
-                        <p className="text-[10px] text-zinc-400 mt-1 line-clamp-2">Compile and extract session data.</p>
+                        <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 line-clamp-2">Compile and extract session data.</p>
                       </div>
                       <div className="mt-3 text-[9px] text-indigo-400 font-bold uppercase tracking-wider flex items-center justify-between">
                         <span>Details ➔</span>
@@ -1613,20 +1613,20 @@ export default function App() {
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">1. What This Section Does:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">1. What This Section Does:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Dual Satoshi-to-Bitcoin real-time mathematical grid. Instantly syncs full multi-thread client allocations and tracks changes.
                             </span>
                           </div>
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">2. What Happens When Clicked:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">2. What Happens When Clicked:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Typing amounts or clicking dynamic stacked buttons multiplies coin balances, flashes dither state, and triggers physics rains.
                             </span>
                           </div>
                           <div className="space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">3. What Success Looks Like:</span>
-                            <span className="block text-[11px] text-amber-300 font-bold mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">3. What Success Looks Like:</span>
+                            <span className="block text-xs font-semibold text-amber-300 font-bold mt-1 leading-relaxed">
                               Both currency rows update simultaneously across the dashboard screen accompanied by real-time client audio ticks.
                             </span>
                           </div>
@@ -1642,7 +1642,7 @@ export default function App() {
                                 handleQuickAdd(25000);
                                 if (soundEnabled) playAudioTone(523, 0.1, 'sine');
                               }}
-                              className="px-4 py-2 border border-indigo-800 bg-indigo-950/40 hover:bg-indigo-900 text-zinc-200 uppercase font-bold text-[10px] tracking-wider cursor-pointer"
+                              className="px-4 py-2 border border-indigo-800 bg-indigo-950/40 hover:bg-indigo-900 text-zinc-200 uppercase font-bold text-xs font-semibold tracking-wider tracking-wider cursor-pointer"
                             >
                               Quick Inject +25,000 Sats
                             </button>
@@ -1651,7 +1651,7 @@ export default function App() {
                                 store.setTotalSats(store.totalSats * 2);
                                 if (soundEnabled) playAudioTone(660, 0.1, 'sawtooth');
                               }}
-                              className="px-4 py-2 border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 uppercase font-bold text-[10px] tracking-wider cursor-pointer"
+                              className="px-4 py-2 border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 uppercase font-bold text-xs font-semibold tracking-wider tracking-wider cursor-pointer"
                             >
                               Double Total Balance ⟳
                             </button>
@@ -1664,22 +1664,22 @@ export default function App() {
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">1. What This Section Does:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">1. What This Section Does:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Saves your streak parameters by lock-shielding metrics during extreme Coinbase market price volatility actions.
                             </span>
                           </div>
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">2. What Happens When Clicked:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">2. What Happens When Clicked:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Toggles premium status, replenishes defensive Freeze tokens, or arms custom target alarms behind secure socket lines.
                             </span>
                           </div>
                           <div className="space-y-1">
-                            <span className="block text-[11px] text-indigo-300 font-bold mt-1 leading-relaxed">
+                            <span className="block text-xs font-semibold text-indigo-300 font-bold mt-1 leading-relaxed">
                               3. What Success Looks Like:
                             </span>
-                            <span className="block text-[11px] text-indigo-300 font-bold leading-relaxed">
+                            <span className="block text-xs font-semibold text-indigo-300 font-bold leading-relaxed">
                               A shiny active beacon labeled "SHIELDED" starts pulsating in your live event stream outputs, stabilizing the conversion queue.
                             </span>
                           </div>
@@ -1695,7 +1695,7 @@ export default function App() {
                                 store.replenishTokens();
                                 if (soundEnabled) playAudioTone(880, 0.08, 'sine');
                               }}
-                              className="px-4 py-2 border border-indigo-800 bg-indigo-950/40 hover:bg-indigo-900 text-zinc-200 uppercase font-bold text-[10px] tracking-wider cursor-pointer"
+                              className="px-4 py-2 border border-indigo-800 bg-indigo-950/40 hover:bg-indigo-900 text-zinc-200 uppercase font-bold text-xs font-semibold tracking-wider tracking-wider cursor-pointer"
                             >
                               Add Freeze Protection Token 🛡️
                             </button>
@@ -1708,22 +1708,22 @@ export default function App() {
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">1. What This Section Does:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">1. What This Section Does:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Switzerland Grid calibration protocol testing layout alignments, floating decimal tolerances, and latency bounds.
                             </span>
                           </div>
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">2. What Happens When Clicked:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">2. What Happens When Clicked:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Triggers a sequential 3.2-second step-by-step diagnostic verification checklist inside of our offline sandbox console.
                             </span>
                           </div>
                           <div className="space-y-1">
-                            <span className="block text-[11px] text-emerald-300 font-bold mt-1 leading-relaxed">
+                            <span className="block text-xs font-semibold text-emerald-300 font-bold mt-1 leading-relaxed">
                               3. What Success Looks Like:
                             </span>
-                            <span className="block text-[11px] text-emerald-400 font-bold leading-relaxed">
+                            <span className="block text-xs font-semibold text-emerald-400 font-bold leading-relaxed">
                               A 40-character certified Proof Hash is spawned with timestamp markings, shifting layout state from "RE-CALIBRATION REQ" to "STABILIZED".
                             </span>
                           </div>
@@ -1743,7 +1743,7 @@ export default function App() {
                                 }
                                 runSymmetryCalibration();
                               }}
-                              className="px-4 py-2 border border-zinc-700 bg-zinc-800 hover:bg-zinc-750 text-zinc-100 uppercase font-black text-[10px] tracking-wider cursor-pointer"
+                              className="px-4 py-2 border border-zinc-700 bg-zinc-800 hover:bg-zinc-750 text-zinc-100 uppercase font-black text-xs font-semibold tracking-wider tracking-wider cursor-pointer"
                             >
                               {isCalibrating ? 'Diagnostics running...' : 'Run Precision Calibration Suite ⚛'}
                             </button>
@@ -1756,22 +1756,22 @@ export default function App() {
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">1. What This Section Does:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">1. What This Section Does:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Offline Audit balance transformation tracker signing every transaction log line mathematically.
                             </span>
                           </div>
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">2. What Happens When Clicked:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">2. What Happens When Clicked:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Audits the local cached history array for tampering and re-verifies cryptographically matching signature row outputs.
                             </span>
                           </div>
                           <div className="space-y-1">
-                            <span className="block text-[11px] text-sky-300 font-bold mt-1 leading-relaxed">
+                            <span className="block text-xs font-semibold text-sky-300 font-bold mt-1 leading-relaxed">
                               3. What Success Looks Like:
                             </span>
-                            <span className="block text-[11px] text-sky-405 font-bold leading-relaxed">
+                            <span className="block text-xs font-semibold text-sky-405 font-bold leading-relaxed">
                               The status badge shifts green-flagged with an official integrity compliant seal, certifying ledger entries safe.
                             </span>
                           </div>
@@ -1791,7 +1791,7 @@ export default function App() {
                                   playCustomTone(680, 0.08);
                                   setTimeout(() => setShowVerificationResolvedToast(false), 4000);
                                 }}
-                                className="px-4 py-2 border border-red-500 bg-red-950/40 hover:bg-red-900 text-red-200 uppercase font-black text-[10px] tracking-wider cursor-pointer"
+                                className="px-4 py-2 border border-red-500 bg-red-950/40 hover:bg-red-900 text-red-200 uppercase font-black text-xs font-semibold tracking-wider tracking-wider cursor-pointer"
                               >
                                 Repair Current Integrity Fault ⚠️
                               </button>
@@ -1801,9 +1801,9 @@ export default function App() {
                                 runLedgerForensicAudit();
                               }}
                               disabled={isAuditingLedger}
-                              className={`px-4 py-2 border uppercase font-bold text-[10px] tracking-wider cursor-pointer ${
+                              className={`px-4 py-2 border uppercase font-bold text-xs font-semibold tracking-wider tracking-wider cursor-pointer ${
                                 isAuditingLedger
-                                  ? 'bg-zinc-800 border-zinc-700 text-zinc-500 animate-pulse cursor-not-allowed'
+                                  ? 'bg-zinc-800 border-zinc-700 text-zinc-300 animate-pulse cursor-not-allowed'
                                   : 'border-emerald-800 bg-emerald-950/40 hover:bg-emerald-900 text-emerald-250 hover:text-white'
                               }`}
                             >
@@ -1818,22 +1818,22 @@ export default function App() {
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">1. What This Section Does:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">1. What This Section Does:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Compiles and serializes the complete offline session history tree so you can port ledger data to spreadsheets.
                             </span>
                           </div>
                           <div className="lg:border-r lg:border-zinc-900 lg:pr-6 space-y-1">
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">2. What Happens When Clicked:</span>
-                            <span className="block text-[11px] text-zinc-200 mt-1 leading-relaxed">
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">2. What Happens When Clicked:</span>
+                            <span className="block text-xs font-semibold text-zinc-200 mt-1 leading-relaxed">
                               Compiles CSV strings and writes to physical download blobs or provides instant clipboard backup text sheets.
                             </span>
                           </div>
                           <div className="space-y-1">
-                            <span className="block text-[11px] text-pink-300 font-bold mt-1 leading-relaxed">
+                            <span className="block text-xs font-semibold text-pink-300 font-bold mt-1 leading-relaxed">
                               3. What Success Looks Like:
                             </span>
-                            <span className="block text-[11px] text-pink-400 font-bold leading-relaxed">
+                            <span className="block text-xs font-semibold text-pink-400 font-bold leading-relaxed">
                               A physical `.csv` file download begins in your browser, or transaction logs are successfully written to device clipboard caches.
                             </span>
                           </div>
@@ -1849,7 +1849,7 @@ export default function App() {
                                 exportLedgerToCSV();
                                 setUserHasExported(true);
                               }}
-                              className="px-4 py-2 border border-pink-805 bg-pink-950/20 hover:bg-pink-900/40 text-pink-300 uppercase font-bold text-[10px] tracking-wider cursor-pointer"
+                              className="px-4 py-2 border border-pink-805 bg-pink-950/20 hover:bg-pink-900/40 text-pink-300 uppercase font-bold text-xs font-semibold tracking-wider tracking-wider cursor-pointer"
                             >
                               Trigger Exporter 📥
                             </button>
@@ -1903,7 +1903,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] uppercase text-zinc-400 tracking-wider">Coinbase Live Price</span>
+                      <span className="text-xs font-semibold tracking-wider uppercase text-zinc-400 tracking-wider">Coinbase Live Price</span>
                       <span className={`text-[8px] px-1.5 py-0.5 font-bold uppercase rounded ${
                         getTickerState() === 'active' ? 'bg-emerald-950/60 text-emerald-400 border border-emerald-900/50' :
                         getTickerState() === 'completed' ? 'bg-amber-950/80 text-amber-400 border border-amber-900/60' :
@@ -1924,7 +1924,7 @@ export default function App() {
 
                 {/* State Debug Console */}
                 <div className="w-full xl:w-auto bg-zinc-950/80 border border-zinc-850 p-2 rounded-xl flex flex-wrap items-center gap-1">
-                  <span className="text-[8px] uppercase font-bold text-zinc-500 px-1.5 tracking-wider font-sans">
+                  <span className="text-[8px] uppercase font-bold text-zinc-300 px-1.5 tracking-wider font-sans">
                     STATE SWITCH:
                   </span>
                   <button
@@ -1950,7 +1950,7 @@ export default function App() {
                         }
                       }}
                       className={`px-2 py-0.5 text-[8px] font-bold uppercase rounded transition-colors ${
-                        tickerStateOverride === state ? 'bg-zinc-800 text-zinc-100 border border-zinc-700' : 'bg-transparent text-zinc-500 hover:text-zinc-300'
+                        tickerStateOverride === state ? 'bg-zinc-800 text-zinc-100 border border-zinc-700' : 'bg-transparent text-zinc-300 hover:text-zinc-300'
                       }`}
                     >
                       {state}
@@ -1967,7 +1967,7 @@ export default function App() {
                     <div className="text-xs font-black text-indigo-300 uppercase tracking-widest">
                       WSS_HANDSHAKE_PENDING // COINBASE LINK
                     </div>
-                    <p className="text-[10px] text-zinc-500 mt-1 max-w-sm">
+                    <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1 max-w-sm">
                       Establishing handshake protocols with the Coinbase WebSocket feed...
                     </p>
                     <div className="mt-4 flex gap-2">
@@ -1988,7 +1988,7 @@ export default function App() {
                         <h4 className="text-xs font-bold text-zinc-300 uppercase mt-0.5">
                           STANDBY STATE ACTIVE
                         </h4>
-                        <p className="text-[10px] text-zinc-500 mt-1 max-w-md">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1 max-w-md">
                           WebSocket connection paused. Resume live real-time pricing updates instantly.
                         </p>
                       </div>
@@ -1998,7 +1998,7 @@ export default function App() {
                         setTickerStateOverride(null);
                         if (workerRef.current) workerRef.current.postMessage({ command: 'connect' });
                       }}
-                      className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-[10px] tracking-wide font-black uppercase rounded-xl transition-all shadow-md shadow-indigo-600/20 active:scale-95"
+                      className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold tracking-wider tracking-wide font-black uppercase rounded-xl transition-all shadow-md shadow-indigo-600/20 active:scale-95"
                     >
                       Resume Live Ticker
                     </button>
@@ -2017,7 +2017,7 @@ export default function App() {
                           <h4 className="text-xs font-bold text-red-200 uppercase">
                             LIVE PRICE FEED PAUSED
                           </h4>
-                          <p className="text-[10px] text-red-300/70 mt-0.5">
+                          <p className="text-xs font-semibold tracking-wider text-red-300/70 mt-0.5">
                             Standard rate limit reached or WebSocket connection closed. Polling backup initiated.
                           </p>
                         </div>
@@ -2037,7 +2037,7 @@ export default function App() {
                     </div>
 
                     <div className="bg-zinc-950 p-2.5 rounded-lg border border-red-500/15 max-h-24 overflow-y-auto">
-                      <div className="text-[8px] uppercase tracking-wider text-zinc-500 font-black mb-1">
+                      <div className="text-[8px] uppercase tracking-wider text-zinc-300 font-black mb-1">
                         Virtual Debugger Backtrace
                       </div>
                       <div className="space-y-1 text-[9px] text-zinc-400 select-all font-mono leading-relaxed">
@@ -2058,7 +2058,7 @@ export default function App() {
                     <span className="text-xs font-black text-zinc-400 uppercase tracking-widest">
                       HISTORICAL PRICE BUFFER VACANT
                     </span>
-                    <p className="text-[10px] text-zinc-500 mt-1 max-w-sm">
+                    <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1 max-w-sm">
                       Cached pricing buffers successfully flushed from memory. Active Web Worker background sync must be initiated to populate trace sparklines.
                     </p>
                     <button
@@ -2079,15 +2079,15 @@ export default function App() {
                 {getTickerState() === 'disconnected' && (
                   <div className="flex flex-col sm:flex-row items-center justify-between bg-zinc-950/60 border border-zinc-850 p-5 rounded-2xl font-mono">
                     <div className="flex items-start gap-3">
-                      <WifiOff className="text-zinc-500 shrink-0 mt-0.5" size={22} />
+                      <WifiOff className="text-zinc-300 shrink-0 mt-0.5" size={22} />
                       <div>
-                        <span className="text-[9px] uppercase tracking-wider text-zinc-500 font-extrabold block">
+                        <span className="text-[9px] uppercase tracking-wider text-zinc-300 font-extrabold block">
                           CONNECTION: OFFLINE
                         </span>
                         <h4 className="text-xs font-bold text-zinc-400 uppercase">
                           FEED TERMINATED MANUALLY
                         </h4>
-                        <p className="text-[10px] text-zinc-500 mt-1 max-w-md">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1 max-w-md">
                           WebSocket channel link has been terminated. Main client thread operating in sandbox read-only.
                         </p>
                       </div>
@@ -2115,7 +2115,7 @@ export default function App() {
                         <h5 className="text-xs font-semibold text-zinc-300 uppercase">
                           Heartbeat Delay: &gt;8 SECONDS
                         </h5>
-                        <p className="text-[10px] text-zinc-500 mt-0.5 max-w-lg">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-0.5 max-w-lg">
                           No pricing packets processed since {secondsSinceLastTick} seconds. Target exchange ticker feeds might be resting.
                         </p>
                       </div>
@@ -2132,13 +2132,13 @@ export default function App() {
                 {getTickerState() === 'completed' && (
                   <div className="bg-amber-950/20 border border-amber-400/30 p-5 rounded-2xl font-mono text-center relative overflow-hidden flex flex-col items-center justify-center">
                     <Trophy className="text-amber-400 animate-bounce mb-2" size={28} />
-                    <span className="text-[10px] tracking-widest text-amber-400 font-black uppercase bg-amber-950/80 border border-amber-500/50 px-3 py-1 rounded-full">
+                    <span className="text-xs font-semibold tracking-wider tracking-widest text-amber-400 font-black uppercase bg-amber-950/80 border border-amber-500/50 px-3 py-1 rounded-full">
                       PORTFOLIO HARVEST ACHIEVED 🏆
                     </span>
                     <h4 className="text-sm font-black text-zinc-100 uppercase mt-2">
                       Satoshi Stack Milestone Logged
                     </h4>
-                    <p className="text-[10px] text-zinc-400 mt-1 max-w-md">
+                    <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 max-w-md">
                       Your exact ledger total has broken through target gates (&gt;= 1,000,000 Sats)! Release-grade calculations verified with parity checks.
                     </p>
                     <div className="mt-4 flex gap-2">
@@ -2152,7 +2152,7 @@ export default function App() {
                       </button>
                       <button
                         onClick={() => store.setTotalSats(10000)}
-                        className="px-3 py-1 border border-zinc-800 text-zinc-500 text-[9px] uppercase font-bold rounded hover:bg-zinc-900"
+                        className="px-3 py-1 border border-zinc-800 text-zinc-300 text-[9px] uppercase font-bold rounded hover:bg-zinc-900"
                       >
                         Reset Balance
                       </button>
@@ -2168,7 +2168,7 @@ export default function App() {
                         <span className="text-[9.5px] font-bold text-emerald-400 tracking-wider block uppercase">
                           FEED SYNC VALIDATED
                         </span>
-                        <p className="text-[10px] text-zinc-400 mt-0.5">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-400 mt-0.5">
                           Coinbase WS Secure Channel established. Parity validation Delta returned 0.000.
                         </p>
                       </div>
@@ -2187,7 +2187,7 @@ export default function App() {
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-zinc-900/40 pb-6 mb-6">
                     {/* PRIORITY 1 LAYER (DOMINANT PRICE EXPOSURE) */}
                     <div className="flex-1 min-w-0">
-                      <div className="text-[9px] uppercase text-zinc-500 font-bold tracking-widest mb-1.5 font-mono">Coinbase Live Feed // Real-Time Spot Price</div>
+                      <div className="text-[9px] uppercase text-zinc-300 font-bold tracking-widest mb-1.5 font-mono">Coinbase Live Feed // Real-Time Spot Price</div>
                       <div className="flex items-baseline gap-3 flex-wrap">
                         <span className={`text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight smooth-morph leading-none font-mono tabular-nums ${
                           isGlitching ? 'chromatic-aberration' : ''
@@ -2232,15 +2232,15 @@ export default function App() {
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <span className="text-[9px] uppercase text-zinc-500 tracking-wider font-bold block">BARRIER ALARM SHIELD</span>
+                        <span className="text-[9px] uppercase text-zinc-300 tracking-wider font-bold block">BARRIER ALARM SHIELD</span>
                         <div className="flex items-center gap-1.5 mt-0.5">
                           <span className={`text-xs font-black uppercase tracking-wide ${
-                            store.isAlertArmed ? 'text-indigo-400' : 'text-zinc-500'
+                            store.isAlertArmed ? 'text-indigo-400' : 'text-zinc-300'
                           }`}>
                             {store.isAlertArmed ? 'ARMED & ACTIVE' : 'SHIELD STANDBY'}
                           </span>
                           <span className="text-zinc-700">|</span>
-                          <span className="text-[10px] text-zinc-400 flex items-center gap-1">
+                          <span className="text-xs font-semibold tracking-wider text-zinc-400 flex items-center gap-1">
                             {store.freezeTokens} Tokens
                             <span className="flex gap-0.5 select-none text-[8px] tracking-tighter">
                               {Array.from({ length: Math.min(4, store.freezeTokens) }).map((_, i) => (
@@ -2261,21 +2261,21 @@ export default function App() {
                 {(getTickerState() === 'active' || getTickerState() === 'success' || getTickerState() === 'stale') && (
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-zinc-950/20 border border-zinc-900/40 p-3.5 rounded-xl mt-2 font-mono">
                     <div>
-                      <span className="text-[8.5px] uppercase text-zinc-500 tracking-wider font-bold block">24H High Limit</span>
+                      <span className="text-[8.5px] uppercase text-zinc-300 tracking-wider font-bold block">24H High Limit</span>
                       <span className="text-xs font-semibold text-zinc-300 mt-0.5 block">
                         ${store.high24h ? store.high24h.toLocaleString() : '68,110.00'}
                       </span>
                     </div>
 
                     <div className="border-l border-zinc-900 pl-4">
-                      <span className="text-[8.5px] uppercase text-zinc-500 tracking-wider font-bold block">24H Low Limit</span>
+                      <span className="text-[8.5px] uppercase text-zinc-300 tracking-wider font-bold block">24H Low Limit</span>
                       <span className="text-xs font-semibold text-zinc-300 mt-0.5 block">
                         ${store.low24h ? store.low24h.toLocaleString() : '66,950.00'}
                       </span>
                     </div>
 
                     <div className="border-l border-zinc-900 pl-4">
-                      <span className="text-[8.5px] uppercase text-zinc-500 tracking-wider font-bold block">24H Volume</span>
+                      <span className="text-[8.5px] uppercase text-zinc-300 tracking-wider font-bold block">24H Volume</span>
                       <span className="text-xs font-semibold text-zinc-300 mt-0.5 block truncate">
                         {store.volume24h ? parseFloat(parseFloat(store.volume24h).toFixed(2)).toLocaleString() : '14,250.45'} BTC
                       </span>
@@ -2303,7 +2303,7 @@ export default function App() {
                 <>
                   {store.activeMode === 'stim' ? (
                     <div className="mt-4 pt-4 border-t border-slate-900 h-20 relative flex items-end overflow-hidden">
-                      <div className="absolute top-1 left-1 text-[9px] font-mono text-zinc-500 uppercase">Latency-optimised Sparkline</div>
+                      <div className="absolute top-1 left-1 text-[9px] font-mono text-zinc-300 uppercase">Latency-optimised Sparkline</div>
                       {store.priceHistory.length > 1 ? (
                         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                           <polyline
@@ -2324,19 +2324,19 @@ export default function App() {
                           />
                         </svg>
                       ) : (
-                        <div className="w-full text-center text-xs text-zinc-500 font-mono mb-2">Streaming tick buffer...</div>
+                        <div className="w-full text-center text-xs text-zinc-300 font-mono mb-2">Streaming tick buffer...</div>
                       )}
                     </div>
                   ) : (
                     <div className="mt-4 pt-4 border-t border-zinc-800">
-                      <div className="text-[10px] uppercase text-zinc-400 mb-1.5 font-bold tracking-wider">Live Ticker Connection Events</div>
-                      <div className="grid grid-cols-12 gap-2 text-left text-[10px] font-mono text-zinc-500 bg-zinc-950 p-2 border border-zinc-850">
+                      <div className="text-xs font-semibold tracking-wider uppercase text-zinc-400 mb-1.5 font-bold tracking-wider">Live Ticker Connection Events</div>
+                      <div className="grid grid-cols-12 gap-2 text-left text-xs font-semibold tracking-wider font-mono text-zinc-300 bg-zinc-950 p-2 border border-zinc-850">
                         <div className="col-span-2">INDEX</div>
                         <div className="col-span-3">UTC STAMP</div>
                         <div className="col-span-5">EXPLICIT ACTION LOG</div>
                         <div className="col-span-2 text-right">STATUS</div>
                       </div>
-                      <div className="max-h-24 overflow-y-auto mt-1 flex flex-col gap-1 font-mono text-[10px]">
+                      <div className="max-h-24 overflow-y-auto mt-1 flex flex-col gap-1 font-mono text-xs font-semibold tracking-wider">
                         {store.priceHistory.length > 0 ? (
                           store.priceHistory.slice(-4).reverse().map((tick: any, idx: number) => {
                             const index = store.priceHistory.length - idx;
@@ -2358,13 +2358,13 @@ export default function App() {
                               statusText = "SHIELDED";
                             } else if (idx === 3) {
                               actionLog = "Local state sequence verified";
-                              statusColor = "text-zinc-500 font-bold";
+                              statusColor = "text-zinc-300 font-bold";
                               statusText = "VERIFIED";
                             }
 
                             return (
                               <div key={idx} className="grid grid-cols-12 gap-2 text-left py-1 pb-1.5 border-b border-zinc-850 text-zinc-350 items-center">
-                                <div className="col-span-2 text-zinc-500">[{index}]</div>
+                                <div className="col-span-2 text-zinc-300">[{index}]</div>
                                 <div className="col-span-3 text-zinc-450">{new Date(tick.time).toISOString().split('T')[1].slice(0, 8)}</div>
                                 <div className="col-span-5 text-zinc-200 font-semibold truncate">{actionLog}</div>
                                 <div className={`col-span-2 text-right text-[9px] ${statusColor}`}>{statusText}</div>
@@ -2372,7 +2372,7 @@ export default function App() {
                             );
                           })
                         ) : (
-                          <div className="text-center text-zinc-500 py-3">No active ticks logged in local memory yet. Establishing live sync...</div>
+                          <div className="text-center text-zinc-300 py-3">No active ticks logged in local memory yet. Establishing live sync...</div>
                         )}
                       </div>
                     </div>
@@ -2403,7 +2403,7 @@ export default function App() {
                       ? 'ring-4 ring-indigo-500 shadow-[0_0_30px_rgba(99,102,241,0.8)] border-indigo-500 scale-[1.01]' 
                       : 'border-purple-900/40 glow-purple'
                   }`}>
-                    <div className="absolute top-0 right-0 py-1 px-3 bg-purple-500/20 text-purple-400 text-[10px] uppercase font-bold tracking-widest rounded-bl-xl border-l border-b border-purple-900/40">
+                    <div className="absolute top-0 right-0 py-1 px-3 bg-purple-500/20 text-purple-400 text-xs font-semibold tracking-wider uppercase font-bold tracking-widest rounded-bl-xl border-l border-b border-purple-900/40">
                       ⚡ Satoshi Conversion Engine
                     </div>
 
@@ -2417,7 +2417,7 @@ export default function App() {
                           setLocalHelpConverter(!localHelpConverter);
                           if (soundEnabled) playCustomTone(700, 0.04);
                         }}
-                        className={`text-[10px] uppercase font-mono tracking-wider border px-2 py-1 rounded transition-colors cursor-pointer flex items-center gap-1.5 ${
+                        className={`text-xs font-semibold tracking-wider uppercase font-mono tracking-wider border px-2 py-1 rounded transition-colors cursor-pointer flex items-center gap-1.5 ${
                           localHelpConverter 
                             ? 'bg-amber-400 border-amber-400 text-zinc-950 font-bold' 
                             : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-zinc-200'
@@ -2437,7 +2437,7 @@ export default function App() {
                           exit={{ opacity: 0, height: 0 }}
                           className="bg-purple-950/20 border border-purple-900/40 p-4 rounded-2xl mb-4 text-xs space-y-3 relative overflow-hidden text-zinc-200"
                         >
-                          <div className="text-[10px] uppercase tracking-widest text-purple-400 font-bold">Module Quick Overview</div>
+                          <div className="text-xs font-semibold tracking-wider uppercase tracking-widest text-purple-400 font-bold">Module Quick Overview</div>
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div>
                               <span className="font-bold text-zinc-400 block mb-0.5">● WHAT THIS DOES:</span>
@@ -2477,7 +2477,7 @@ export default function App() {
                               addLedgerEntry("Seeded 10,000 Sats cache units", 10000, 0.0001);
                               if (soundEnabled) playAudioTone(523.25, 0.1, 'sine');
                             }}
-                            className="text-[10px] uppercase font-mono tracking-wider font-bold bg-amber-500 hover:bg-amber-400 text-zinc-950 px-3.5 py-2 rounded-xl transition-all hover:scale-105"
+                            className="text-xs font-semibold tracking-wider uppercase font-mono tracking-wider font-bold bg-amber-500 hover:bg-amber-400 text-zinc-950 px-3.5 py-2 rounded-xl transition-all hover:scale-105"
                           >
                             Stack 10,000 Sats
                           </button>
@@ -2488,7 +2488,7 @@ export default function App() {
                               addLedgerEntry("Seeded standard Genesis record (100k Sats)", 100000, 0.001);
                               if (soundEnabled) playAudioTone(659.25, 0.12, 'sine');
                             }}
-                            className="text-[10px] uppercase font-mono tracking-wider font-bold bg-purple-950/40 hover:bg-purple-900/60 text-purple-300 border border-purple-500/30 px-3.5 py-2 rounded-xl transition-all hover:scale-105"
+                            className="text-xs font-semibold tracking-wider uppercase font-mono tracking-wider font-bold bg-purple-950/40 hover:bg-purple-900/60 text-purple-300 border border-purple-500/30 px-3.5 py-2 rounded-xl transition-all hover:scale-105"
                           >
                             Genesis Prime (100k)
                           </button>
@@ -2498,7 +2498,7 @@ export default function App() {
                       <div className="space-y-4">
                         {/* BTC BLOCK */}
                         <div className="bg-black/40 border border-slate-800 hover:border-slate-750 p-4 rounded-2xl relative transition-all duration-300 focus-within:border-amber-500/30">
-                          <label className="text-[10px] text-zinc-400 uppercase tracking-widest block mb-1 font-mono">Bitcoin Amount (BTC)</label>
+                          <label className="text-sm font-semibold tracking-wider text-zinc-400 uppercase tracking-widest block mb-1 font-mono">Bitcoin Amount (BTC)</label>
                           <div className="flex items-center justify-between">
                             <input 
                               type="text"
@@ -2523,7 +2523,7 @@ export default function App() {
                             <span className={`text-rose-400 font-bold transition-all duration-300 ${btcValidationWarning ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                               {btcValidationWarning || 'NOMINAL'}
                             </span>
-                            <span className="text-zinc-500 font-bold tabular-nums">
+                            <span className="text-zinc-300 font-bold tabular-nums">
                               ≈ {((parseFloat(manualBtcInput) || 0) * (store.livePrice || 67420)).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} USD
                             </span>
                           </div>
@@ -2545,7 +2545,7 @@ export default function App() {
 
                         {/* SATS BLOCK */}
                         <div className="bg-black/40 border border-purple-900/40 hover:border-purple-800/60 p-4 rounded-2xl relative glow-purple transition-all duration-300 focus-within:border-emerald-500/30">
-                          <label className="text-[10px] text-purple-300 uppercase tracking-widest block mb-1 font-mono font-bold">Satoshis (Sats)</label>
+                          <label className="text-sm font-semibold tracking-wider text-purple-300 uppercase tracking-widest block mb-1 font-mono font-bold">Satoshis (Sats)</label>
                           <div className="flex items-center justify-between">
                             <input 
                               type="text"
@@ -2574,7 +2574,7 @@ export default function App() {
                             <span className={`text-rose-400 font-bold transition-all duration-300 ${satsValidationWarning ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                               {satsValidationWarning || 'NOMINAL'}
                             </span>
-                            <span className="text-zinc-500 font-bold tabular-nums">
+                            <span className="text-zinc-300 font-bold tabular-nums">
                               ≈ {(((parseInt(manualSatInput.replace(/\D/g, ''), 10) || 0) / 100000000) * (store.livePrice || 67420)).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} USD
                             </span>
                           </div>
@@ -2584,7 +2584,7 @@ export default function App() {
                         <div className="bg-zinc-950/40 border border-zinc-850 p-4 rounded-2xl mt-2 select-none">
                           <div className="text-[9px] uppercase tracking-wider text-purple-400 font-mono font-bold mb-2.5 flex items-center justify-between">
                             <span>⚡ Live Calibration Presets</span>
-                            <span className="text-[8px] text-zinc-500 font-bold">Instantly recalibrates outputs</span>
+                            <span className="text-[8px] text-zinc-300 font-bold">Instantly recalibrates outputs</span>
                           </div>
                           <div className="grid grid-cols-3 gap-1.5">
                             {[
@@ -2617,7 +2617,7 @@ export default function App() {
 
                     {/* DYNAMIC FEED DISCONNECTED / STALE STATUS BANNERS FOR THE CONVERTER */}
                     {!isForcedEmptyStore && getTickerState() === 'disconnected' && (
-                      <div className="mt-4 p-3 bg-red-950/10 border border-red-500/20 rounded-2xl flex items-center justify-between text-[11px] font-mono animate-pulse">
+                      <div className="mt-4 p-3 bg-red-950/10 border border-red-500/20 rounded-2xl flex items-center justify-between text-xs font-semibold font-mono animate-pulse">
                         <span className="text-red-400 font-bold flex items-center gap-1.5">
                           <WifiOff size={14} className="text-red-400" />
                           USD Calibration Offline (Socket down)
@@ -2635,7 +2635,7 @@ export default function App() {
                     )}
 
                     {!isForcedEmptyStore && getTickerState() === 'stale' && (
-                      <div className="mt-4 p-3 bg-yellow-950/10 border border-yellow-500/20 rounded-2xl flex items-center justify-between text-[11px] font-mono animate-pulse">
+                      <div className="mt-4 p-3 bg-yellow-950/10 border border-yellow-500/20 rounded-2xl flex items-center justify-between text-xs font-semibold font-mono animate-pulse">
                         <span className="text-yellow-400 font-bold flex items-center gap-1.5">
                           <Clock size={14} className="text-yellow-400" />
                           Rate Stale: Displaying cached price ($67,420)
@@ -2699,7 +2699,7 @@ export default function App() {
                         <Flame className="text-orange-500 animate-pulse fill-orange-500" size={14} />
                         Streak Combo: <strong className="text-orange-400 font-mono text-sm">{store.currentStreak}x</strong>
                       </div>
-                      <div className="text-zinc-500 text-[10px]">
+                      <div className="text-zinc-300 text-xs font-semibold tracking-wider">
                         Conversions total: <span className="text-indigo-400 font-mono font-semibold">{conversionsCount}</span>
                       </div>
                     </div>
@@ -2725,7 +2725,7 @@ export default function App() {
                         <Zap size={14} className="text-amber-400" />
                         Market Volatility Visualizer / Stress-Test Suite
                       </h4>
-                      <p className="text-[10px] text-zinc-500 mb-4 leading-relaxed font-mono">
+                      <p className="text-xs font-semibold tracking-wider text-zinc-300 mb-4 leading-relaxed font-mono">
                         Configure physics flow and rendering parameters to stress-test your system's capability to process high-frequency feed surges.
                       </p>
 
@@ -2770,7 +2770,7 @@ export default function App() {
 
                         {/* Color Preset selectors */}
                         <div>
-                          <span className="text-[10px] text-zinc-400 uppercase tracking-wider block mb-2 font-mono">Chromatic Palette Preset</span>
+                          <span className="text-xs font-semibold tracking-wider text-zinc-400 uppercase tracking-wider block mb-2 font-mono">Chromatic Palette Preset</span>
                           <div className="grid grid-cols-4 gap-1.5">
                             {(['gold', 'neon', 'emerald', 'amber'] as const).map((col) => (
                               <button
@@ -2802,14 +2802,14 @@ export default function App() {
                         <Volume2 size={14} className="text-purple-400 animate-pulse" />
                         ACOUSTIC ALERT CALIBRATIONS // AUDIO PROFILER
                       </h4>
-                      <p className="text-[10px] text-zinc-500 mb-4 leading-relaxed font-mono">
+                      <p className="text-xs font-semibold tracking-wider text-zinc-300 mb-4 leading-relaxed font-mono">
                         Calibrate high-end audio frequencies and oscillator signatures to optimize real-time status alerts for all hardware conversion events and DCA executions.
                       </p>
 
                       <div className="space-y-4">
                         {/* Selector of audio wave */}
                         <div>
-                          <span className="text-[10px] text-zinc-400 uppercase tracking-wider block mb-2 font-mono">Oscillator Waveform Geometry</span>
+                          <span className="text-xs font-semibold tracking-wider text-zinc-400 uppercase tracking-wider block mb-2 font-mono">Oscillator Waveform Geometry</span>
                           <div className="grid grid-cols-4 gap-1.5">
                             {(['sine', 'triangle', 'sawtooth', 'square'] as OscillatorType[]).map((wave) => (
                               <button
@@ -2832,7 +2832,7 @@ export default function App() {
 
                         {/* Frequency step multiplier */}
                         <div>
-                          <span className="text-[10px] text-zinc-400 uppercase tracking-wider block mb-2 font-mono">Tactile Audio Profile Range</span>
+                          <span className="text-xs font-semibold tracking-wider text-zinc-400 uppercase tracking-wider block mb-2 font-mono">Tactile Audio Profile Range</span>
                           <div className="grid grid-cols-2 gap-1.5">
                             {(['pentatonic', 'arcade', 'drone', 'sharp'] as const).map((sc) => (
                               <button
@@ -2907,7 +2907,7 @@ export default function App() {
                         <ShieldCheck size={14} className="text-indigo-400" />
                         Conversion Protection Settings
                       </h4>
-                      <p className="text-xs text-zinc-400 mb-4 leading-relaxed">
+                      <p className="text-base text-zinc-200 leading-relaxed mb-4 leading-relaxed">
                         In Symmetry Mode, a precision balance must be maintained to sustain your conversion streak. Freeze Tokens shield your activity.
                       </p>
                       
@@ -2920,7 +2920,7 @@ export default function App() {
                         </div>
                         <button 
                           onClick={() => store.replenishTokens()}
-                          className="bg-indigo-900/40 hover:bg-indigo-900 text-zinc-300 border border-indigo-800 px-3 py-1 rounded-xl text-[10px] uppercase font-bold"
+                          className="bg-indigo-900/40 hover:bg-indigo-900 text-zinc-300 border border-indigo-800 px-3 py-1 rounded-xl text-xs font-semibold tracking-wider uppercase font-bold"
                         >
                           Replenish Tokens 💎
                         </button>
@@ -2966,7 +2966,7 @@ export default function App() {
                     )}
 
                     <div className="relative z-10">
-                      <div className="absolute top-0 right-0 py-1 px-3 bg-zinc-800 text-zinc-400 text-[10px] uppercase tracking-wider border-l border-b border-zinc-700/50">
+                      <div className="absolute top-0 right-0 py-1 px-3 bg-zinc-800 text-zinc-400 text-xs font-semibold tracking-wider uppercase tracking-wider border-l border-b border-zinc-700/50">
                         Grid System: 8-Decimal Matrix
                       </div>
 
@@ -2979,7 +2979,7 @@ export default function App() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
                         <div className="bg-zinc-950/60 border border-zinc-805 p-4 focus-within:border-zinc-700 transition-all">
-                           <label className="text-[10px] text-zinc-500 uppercase font-black block mb-1">X1: BTC EXACT BALANCE</label>
+                           <label className="text-sm font-semibold tracking-wider text-zinc-300 uppercase font-black block mb-1">X1: BTC EXACT BALANCE</label>
                            <div className={`flex items-center justify-between border-b border-zinc-800 pb-2 ${isSnapping ? 'number-snap' : ''}`}>
                             <input 
                               type="text"
@@ -2998,11 +2998,11 @@ export default function App() {
                               }}
                               className="bg-transparent border-none text-xl font-bold w-full text-zinc-100 focus:outline-none focus:ring-0 font-mono"
                             />
-                            <span className="text-zinc-600 font-bold select-none text-[11px] font-mono shrink-0">BTC</span>
+                            <span className="text-zinc-600 font-bold select-none text-xs font-semibold font-mono shrink-0">BTC</span>
                           </div>
                           
                           <div className="flex justify-between items-center text-[9px] mt-2 font-mono">
-                            <span className={`font-semibold transition-all duration-300 ${btcValidationWarning ? 'text-red-400 font-bold' : 'text-zinc-500'}`}>
+                            <span className={`font-semibold transition-all duration-300 ${btcValidationWarning ? 'text-red-400 font-bold' : 'text-zinc-300'}`}>
                               {btcValidationWarning || 'IEEE 754 DOUBLE PRECISION'}
                             </span>
                             <span className="text-zinc-400 font-bold">
@@ -3012,7 +3012,7 @@ export default function App() {
                         </div>
 
                         <div className="bg-zinc-950/60 border border-zinc-805 p-4 focus-within:border-zinc-700 transition-all">
-                           <label className="text-[10px] text-zinc-500 uppercase font-black block mb-1">Y1: SATS CONVERSION</label>
+                           <label className="text-sm font-semibold tracking-wider text-zinc-300 uppercase font-black block mb-1">Y1: SATS CONVERSION</label>
                            <div className={`flex items-center justify-between border-b border-zinc-800 pb-2 ${isSnapping ? 'number-snap' : ''}`}>
                             <input 
                               type="text"
@@ -3033,11 +3033,11 @@ export default function App() {
                               }}
                               className="bg-transparent border-none text-xl font-bold w-full text-zinc-100 focus:outline-none focus:ring-0 font-mono"
                             />
-                            <span className="text-zinc-600 font-bold select-none text-[11px] font-mono shrink-0">SATS</span>
+                            <span className="text-zinc-600 font-bold select-none text-xs font-semibold font-mono shrink-0">SATS</span>
                           </div>
 
                           <div className="flex justify-between items-center text-[9px] mt-2 font-mono">
-                            <span className={`font-semibold transition-all duration-300 ${satsValidationWarning ? 'text-red-400 font-bold' : 'text-zinc-500'}`}>
+                            <span className={`font-semibold transition-all duration-300 ${satsValidationWarning ? 'text-red-400 font-bold' : 'text-zinc-300'}`}>
                               {satsValidationWarning || '10^8 SATOSHIS SCALING SCALE'}
                             </span>
                             <span className="text-zinc-400 font-bold">
@@ -3050,7 +3050,7 @@ export default function App() {
 
                       {/* QUICK PRESETS IN SYMMETRY MODE */}
                       <div className="mt-4 p-4 bg-zinc-950/40 border border-zinc-850 select-none">
-                        <div className="text-[8px] tracking-widest text-zinc-500 uppercase font-bold mb-2.5 flex justify-between font-mono">
+                        <div className="text-[8px] tracking-widest text-zinc-300 uppercase font-bold mb-2.5 flex justify-between font-mono">
                           <span>CONVERSION RANGE PRESETS</span>
                           <span>STABILIZED DIRECT RANGE LOCKS</span>
                         </div>
@@ -3090,11 +3090,11 @@ export default function App() {
                             : 'bg-zinc-950/40 border-zinc-800'
                       }`}>
                         <div className="flex justify-between items-center mb-2 border-b border-zinc-850 pb-2">
-                          <div className="text-[11px] font-bold text-zinc-300 uppercase tracking-wider">Precision Balance Ledger Audit</div>
+                          <div className="text-xs font-semibold font-bold text-zinc-300 uppercase tracking-wider">Precision Balance Ledger Audit</div>
                           <span className={`text-[8px] font-mono font-bold px-1.5 py-0.5 ${
                             isForcedFailedVerification ? 'bg-red-950 text-red-400 border border-red-900' :
                             isForcedEmptyStore ? 'bg-amber-950 text-amber-500 border border-amber-900' :
-                            'bg-zinc-900 text-zinc-500'
+                            'bg-zinc-900 text-zinc-300'
                           }`}>
                             {isForcedFailedVerification ? '⚠️ INTEGRITY_FAULT' : isForcedEmptyStore ? '● EMPTY_SEQUENCE' : '● AUDITED'}
                           </span>
@@ -3131,7 +3131,7 @@ export default function App() {
                                 </span>
                                 <span>+0.02450302 BTC [SIGNATURE_FAULT]</span>
                               </div>
-                              <p className="text-[10px] text-zinc-500 mt-1 max-w-md">
+                              <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1 max-w-md">
                                 Variance error caught in ledger index #04F. Raw key mismatches standard 256-bit hash signatures.
                               </p>
                               <button
@@ -3148,8 +3148,8 @@ export default function App() {
                               </button>
                             </div>
                           ) : isForcedEmptyStore ? (
-                            <div className="pt-2 text-zinc-500">
-                              <p className="text-[10px] text-amber-400/80">
+                            <div className="pt-2 text-zinc-300">
+                              <p className="text-xs font-semibold tracking-wider text-amber-400/80">
                                 Cache sequence empty. Zero allocation mapped. No transactions exist to perform signature audit verification.
                               </p>
                               <button
@@ -3241,7 +3241,7 @@ export default function App() {
                     <div className="relative z-10 flex-1 flex flex-col justify-between">
                       
                       <div>
-                        <div className="flex items-center gap-1.5 text-[10px] text-zinc-400 uppercase tracking-widest mb-4">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-zinc-400 uppercase tracking-widest mb-4">
                           <ShieldCheck size={14} className="text-indigo-400" />
                           Portfolio Valuation Block
                         </div>
@@ -3251,9 +3251,9 @@ export default function App() {
                           getTickerState() === 'stale' ? 'border-yellow-500/20 bg-yellow-950/10 animate-pulse' :
                           'bg-zinc-950/60'
                         }`}>
-                          <div className="text-xs text-zinc-500 uppercase tracking-wider font-mono">EXACT LEDGER BALANCE</div>
+                          <div className="text-xs text-zinc-300 uppercase tracking-wider font-mono">EXACT LEDGER BALANCE</div>
                           <div className={`text-xl font-bold mt-1 smooth-morph font-mono ${
-                            isForcedEmptyStore ? 'text-zinc-500 font-normal' : 'text-zinc-100 font-bold'
+                            isForcedEmptyStore ? 'text-zinc-300 font-normal' : 'text-zinc-100 font-bold'
                           } ${
                             isGlitching ? 'chromatic-aberration' : ''
                           } ${isSnapping ? 'number-snap' : ''}`}>
@@ -3267,7 +3267,7 @@ export default function App() {
                           </div>
 
                           {getTickerState() === 'disconnected' && (
-                            <div className="mt-4 mx-4 p-3 border border-red-500/30 bg-red-950/30 text-[10px] text-left text-red-400 font-mono space-y-2 select-all">
+                            <div className="mt-4 mx-4 p-3 border border-red-500/30 bg-red-950/30 text-xs font-semibold tracking-wider text-left text-red-400 font-mono space-y-2 select-all">
                               <span className="flex items-center gap-1 font-bold">
                                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
                                 ⚠️ VALUATION OFFLINE: Socket terminated
@@ -3289,7 +3289,7 @@ export default function App() {
                           )}
 
                           {getTickerState() === 'stale' && (
-                            <div className="mt-4 mx-4 p-3 border border-yellow-500/30 bg-yellow-950/30 text-[10px] text-left text-yellow-400 font-mono space-y-2">
+                            <div className="mt-4 mx-4 p-3 border border-yellow-500/30 bg-yellow-950/30 text-xs font-semibold tracking-wider text-left text-yellow-400 font-mono space-y-2">
                               <span className="flex items-center gap-1 font-bold">
                                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-ping" />
                                 ⚠️ STALE MARKET REFERENCES
@@ -3360,7 +3360,7 @@ export default function App() {
                           <Sliders size={14} className="text-indigo-400" />
                           Switzerland Precision Grid Calibration Suite
                         </h4>
-                        <p className="text-[10px] text-zinc-500 mt-1 uppercase tracking-wider font-mono">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1 uppercase tracking-wider font-mono">
                           Continuous IEEE-754 mantissa verification & websocket latency drift alignments.
                         </p>
                       </div>
@@ -3389,7 +3389,7 @@ export default function App() {
                             setLocalHelpCalibration(!localHelpCalibration);
                             if (soundEnabled) playCustomTone(700, 0.04);
                           }}
-                          className={`text-[10px] uppercase font-mono tracking-wider border px-3 py-1.5 rounded-none transition-colors cursor-pointer flex items-center gap-1.5 ${
+                          className={`text-xs font-semibold tracking-wider uppercase font-mono tracking-wider border px-3 py-1.5 rounded-none transition-colors cursor-pointer flex items-center gap-1.5 ${
                             localHelpCalibration 
                               ? 'bg-amber-400 border-amber-400 text-zinc-950 font-bold' 
                               : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-zinc-200'
@@ -3422,8 +3422,8 @@ export default function App() {
                           exit={{ opacity: 0, height: 0 }}
                           className="bg-zinc-900/50 border border-zinc-800 p-4 rounded-none mb-6 text-xs space-y-3 relative overflow-hidden text-zinc-300 font-mono"
                         >
-                          <div className="text-[10px] uppercase tracking-widest text-indigo-400 font-bold">Grid Calibration Integrity Parameters</div>
-                          <p className="text-[10px] text-zinc-400 leading-relaxed">
+                          <div className="text-xs font-semibold tracking-wider uppercase tracking-widest text-indigo-400 font-bold">Grid Calibration Integrity Parameters</div>
+                          <p className="text-xs font-semibold tracking-wider text-zinc-400 leading-relaxed">
                             Floating-point arithmetic on browsers can incur minimal fractional accumulation drift over time (IEEE-754 mantissa artifacts). The Swiss Grid protocol coordinates layout metrics and re-asserts precision limits down to exactly <span className="text-zinc-100">0.00000001 BTC</span>.
                           </p>
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-zinc-850 pt-3">
@@ -3482,7 +3482,7 @@ export default function App() {
                           <div className={`p-2 border transition-colors ${
                             calibrationStep >= 1 ? 'border-emerald-500/20 bg-emerald-950/5 text-emerald-300' :
                             calibrationStep === 0 && isCalibrating ? 'border-indigo-500/40 bg-indigo-950/10 text-indigo-300' :
-                            'border-zinc-850 bg-zinc-950/20 text-zinc-500'
+                            'border-zinc-850 bg-zinc-950/20 text-zinc-300'
                           }`}>
                             <span className="block font-bold">⚛ STAGE 1: COORDINATES</span>
                             <span className="text-[8px] text-zinc-400 block mt-0.5">Symmetry layout viewport checks.</span>
@@ -3495,7 +3495,7 @@ export default function App() {
                           <div className={`p-2 border transition-colors ${
                             calibrationStep >= 2 ? 'border-emerald-500/20 bg-emerald-950/5 text-emerald-300' :
                             calibrationStep === 1 && isCalibrating ? 'border-indigo-500/40 bg-indigo-950/10 text-indigo-300' :
-                            'border-zinc-850 bg-zinc-950/20 text-zinc-500'
+                            'border-zinc-850 bg-zinc-950/20 text-zinc-300'
                           }`}>
                             <span className="block font-bold">⚛ STAGE 2: MANTISSA DATA</span>
                             <span className="text-[8px] text-zinc-400 block mt-0.5">IEEE-754 fraction convergence sweeps.</span>
@@ -3509,7 +3509,7 @@ export default function App() {
                             calibrationStep >= 3 ? 'border-emerald-500/20 bg-emerald-950/5 text-emerald-300' :
                             calibrationStep === -2 ? 'border-red-500/30 bg-red-950/10 text-red-300' :
                             calibrationStep === 2 && isCalibrating ? 'border-indigo-500/40 bg-indigo-950/10 text-indigo-300' :
-                            'border-zinc-850 bg-zinc-950/20 text-zinc-500'
+                            'border-zinc-850 bg-zinc-950/20 text-zinc-300'
                           }`}>
                             <span className="block font-bold">⚛ STAGE 3: PING/LATENCY</span>
                             <span className="text-[8px] text-zinc-400 block mt-0.5">Coinbase WebSocket feeds bounds check.</span>
@@ -3522,7 +3522,7 @@ export default function App() {
                           <div className={`p-2 border transition-colors ${
                             calibrationStep === 3 && !isCalibrating && auditHash ? 'border-emerald-500/20 bg-emerald-950/5 text-emerald-300' :
                             calibrationStep === 3 && isCalibrating ? 'border-indigo-500/40 bg-zinc-900 text-indigo-300' :
-                            'border-zinc-850 bg-zinc-950/20 text-zinc-500'
+                            'border-zinc-850 bg-zinc-950/20 text-zinc-300'
                           }`}>
                             <span className="block font-bold">⚛ STAGE 4: CRYPTO CHECKSUM</span>
                             <span className="text-[8px] text-zinc-400 block mt-0.5">Signs certified checksum hash parameter.</span>
@@ -3536,12 +3536,12 @@ export default function App() {
 
                     {/* Detailed Failure & Instructions Diagnostics Alert */}
                     {calibrationStep === -2 && (
-                      <div className="bg-red-950/30 border border-red-500/40 p-4 font-mono text-[11px] text-red-300 mb-4 animate-fade-in space-y-2.5">
+                      <div className="bg-red-950/30 border border-red-500/40 p-4 font-mono text-xs font-semibold text-red-300 mb-4 animate-fade-in space-y-2.5">
                         <div className="flex items-center gap-2">
                           <AlertTriangle className="text-red-400 animate-pulse" size={16} />
                           <strong className="uppercase tracking-wide">CALIBRATION WARNING: LIVE FEED SPEED DELAY (485ms Jitter)</strong>
                         </div>
-                        <p className="text-zinc-300 text-[10px] leading-relaxed">
+                        <p className="text-zinc-300 text-xs font-semibold tracking-wider leading-relaxed">
                           Response time from <strong>api.coinbase.com</strong> exceeded recommended limits. High local network latency or simulated connection delays triggered this warning. Run calibration to realign calculation parameters.
                         </p>
                         <div className="bg-zinc-950/85 p-3 border border-zinc-900 text-[9px] text-zinc-400 space-y-1 rounded-none">
@@ -3566,7 +3566,7 @@ export default function App() {
 
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
                       {/* Telemetry Console Outputs */}
-                      <div className="md:col-span-8 bg-zinc-950 border border-zinc-900 p-4 font-mono text-[10px] text-zinc-400 h-36 overflow-y-auto flex flex-col justify-end gap-1 select-text">
+                      <div className="md:col-span-8 bg-zinc-950 border border-zinc-900 p-4 font-mono text-xs font-semibold tracking-wider text-zinc-400 h-36 overflow-y-auto flex flex-col justify-end gap-1 select-text">
                         {calibrationStep === -1 ? (
                           <div className="text-zinc-650 text-center py-10 uppercase tracking-widest">
                             [STBY] Standby offline mode. Launch precision calibration suite diagnostics sweep to start telemetry loops.
@@ -3579,7 +3579,7 @@ export default function App() {
                                 : log.includes('[ALERT]') || log.includes('[ERROR]') || log.includes('[FATAL]')
                                   ? 'text-red-400 font-bold'
                                   : log.includes('[SYSTEM]') 
-                                    ? 'text-zinc-500' 
+                                    ? 'text-zinc-300' 
                                     : 'text-zinc-300'
                             }>
                               {log}
@@ -3589,10 +3589,10 @@ export default function App() {
                       </div>
 
                       {/* Decimals Certification Metadata details */}
-                      <div className="md:col-span-4 space-y-3 font-mono text-[10px] text-zinc-500">
+                      <div className="md:col-span-4 space-y-3 font-mono text-xs font-semibold tracking-wider text-zinc-300">
                         <div className="bg-zinc-900/20 border border-zinc-800 p-3 h-36 flex flex-col justify-between">
                           <div>
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">Verification Status:</span>
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">Verification Status:</span>
                             <span className={`block font-bold text-xs mt-0.5 ${
                               calibrationStep === -2 ? 'text-red-400' : auditHash ? 'text-emerald-400 animate-pulse' : 'text-zinc-650'
                             }`}>
@@ -3600,13 +3600,13 @@ export default function App() {
                             </span>
                           </div>
                           <div>
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">Proof Hash Checkpoint:</span>
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">Proof Hash Checkpoint:</span>
                             <span className="block text-zinc-400 font-mono text-[9px] truncate" title={auditHash}>
                               {auditHash ? auditHash : 'SANDBOX_PROV_IDLE'}
                             </span>
                           </div>
                           <div>
-                            <span className="block text-[8px] tracking-widest text-zinc-500 uppercase">Last Certify timestamp:</span>
+                            <span className="block text-[8px] tracking-widest text-zinc-300 uppercase">Last Certify timestamp:</span>
                             <span className="block text-zinc-450">
                               {auditTime ? auditTime : 'NEVER_STABILIZED'}
                             </span>
@@ -3632,7 +3632,7 @@ export default function App() {
                           <Database size={14} className="text-emerald-400" />
                           Cryptographic Local Ledger Registry
                         </h4>
-                        <p className="text-[10px] text-zinc-500 mt-1">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-1">
                           Persistent local audit registry keeping record of all balance transformations with cryptographic signatures.
                         </p>
                       </div>
@@ -3643,7 +3643,7 @@ export default function App() {
                             setLocalHelpLedger(!localHelpLedger);
                             if (soundEnabled) playCustomTone(700, 0.04);
                           }}
-                          className={`text-[10px] uppercase font-mono tracking-wider border px-3 py-1.5 rounded-none transition-colors cursor-pointer flex items-center gap-1.5 ${
+                          className={`text-xs font-semibold tracking-wider uppercase font-mono tracking-wider border px-3 py-1.5 rounded-none transition-colors cursor-pointer flex items-center gap-1.5 ${
                             localHelpLedger 
                               ? 'bg-amber-400 border-amber-400 text-zinc-950 font-bold' 
                               : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-zinc-200'
@@ -3658,9 +3658,9 @@ export default function App() {
                             runLedgerForensicAudit();
                           }}
                           disabled={isAuditingLedger}
-                          className={`text-[10px] uppercase font-mono tracking-wider border px-3 py-1.5 font-bold cursor-pointer transition-all ${
+                          className={`text-xs font-semibold tracking-wider uppercase font-mono tracking-wider border px-3 py-1.5 font-bold cursor-pointer transition-all ${
                             isAuditingLedger
-                              ? 'bg-zinc-900 border-zinc-800 text-zinc-500 animate-pulse cursor-not-allowed'
+                              ? 'bg-zinc-900 border-zinc-800 text-zinc-300 animate-pulse cursor-not-allowed'
                               : 'border-zinc-850 bg-zinc-950 hover:bg-zinc-900 hover:border-zinc-700 text-zinc-350 hover:text-zinc-100'
                           }`}
                         >
@@ -3672,7 +3672,7 @@ export default function App() {
                             exportLedgerToCSV();
                             setUserHasExported(true);
                           }}
-                          className="text-[10px] uppercase font-mono tracking-wider border border-zinc-850 bg-zinc-950 hover:bg-zinc-900 hover:border-zinc-700 text-zinc-355 hover:text-zinc-100 px-3 py-1.5 font-bold cursor-pointer transition-colors"
+                          className="text-xs font-semibold tracking-wider uppercase font-mono tracking-wider border border-zinc-850 bg-zinc-950 hover:bg-zinc-900 hover:border-zinc-700 text-zinc-355 hover:text-zinc-100 px-3 py-1.5 font-bold cursor-pointer transition-colors"
                         >
                           Export CSV 📥
                         </button>
@@ -3691,7 +3691,7 @@ export default function App() {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 divide-y md:divide-y-0 md:divide-x divide-zinc-900">
                             {/* Auditing Segment */}
                             <div className="space-y-2">
-                              <div className="text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Ledger Auditing Protocol</div>
+                              <div className="text-xs font-semibold tracking-wider uppercase tracking-widest text-emerald-400 font-bold">Ledger Auditing Protocol</div>
                               <div className="space-y-1">
                                 <span className="font-bold text-zinc-400 block">● WHAT THIS DOES:</span>
                                 Inspects raw memory transactions for tampering, signature consistency, and checksum verification of indices.
@@ -3708,7 +3708,7 @@ export default function App() {
 
                             {/* Exporting Segment */}
                             <div className="md:pl-6 space-y-2 pt-4 md:pt-0">
-                              <div className="text-[10px] uppercase tracking-widest text-indigo-400 font-bold">Registry CSV Export</div>
+                              <div className="text-xs font-semibold tracking-wider uppercase tracking-widest text-indigo-400 font-bold">Registry CSV Export</div>
                               <div className="space-y-1">
                                 <span className="font-bold text-zinc-400 block">● WHAT THIS DOES:</span>
                                 Package serialization engine parsing memory structures to generate compatible external spreadsheets.
@@ -3740,9 +3740,9 @@ export default function App() {
                         <div className="flex items-start gap-3">
                           <FileWarning size={20} className="text-red-400 mt-0.5 shrink-0 animate-pulse" />
                           <div>
-                            <span className="text-[10px] uppercase font-black tracking-wider text-red-500 block">EXPORT_PIPELINE_ERROR</span>
+                            <span className="text-xs font-semibold tracking-wider uppercase font-black tracking-wider text-red-500 block">EXPORT_PIPELINE_ERROR</span>
                             <h4 className="font-bold text-red-200 uppercase text-xs">CSV compilation failed: Buffer Write Disallowed in Sandbox</h4>
-                            <p className="text-[11px] text-zinc-400 mt-1 leading-relaxed">
+                            <p className="text-xs font-semibold text-zinc-400 mt-1 leading-relaxed">
                               Standard sandbox environment prevents iframe download triggers. Alternate export routes are primed immediately.
                             </p>
                           </div>
@@ -3792,18 +3792,18 @@ export default function App() {
                         
                         {/* Search field */}
                         <div className="md:col-span-4 relative">
-                          <Search size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                          <Search size={13} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-300" />
                           <input
                             type="text"
                             value={ledgerSearchQuery}
                             onChange={(e) => setLedgerSearchQuery(e.target.value)}
                             placeholder="Filter by ID, description, signature..."
-                            className="w-full bg-zinc-950/80 border border-zinc-850 focus:border-zinc-750 pl-9 pr-4 py-2 text-[11px] font-mono text-zinc-200 placeholder-zinc-600 focus:outline-none focus:ring-0 rounded-none transition-colors"
+                            className="w-full bg-zinc-950/80 border border-zinc-850 focus:border-zinc-750 pl-9 pr-4 py-2 text-xs font-semibold font-mono text-zinc-200 placeholder-zinc-600 focus:outline-none focus:ring-0 rounded-none transition-colors"
                           />
                           {ledgerSearchQuery && (
                             <button 
                               onClick={() => setLedgerSearchQuery('')}
-                              className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 text-[9px] font-bold font-mono"
+                              className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-300 hover:text-zinc-300 text-[9px] font-bold font-mono"
                             >
                               CLEAR
                             </button>
@@ -3812,7 +3812,7 @@ export default function App() {
 
                         {/* Status quick categorization pills */}
                         <div className="md:col-span-4 flex flex-wrap gap-1.5 items-center">
-                          <span className="text-[9px] uppercase tracking-wider text-zinc-500 font-bold mr-1.5 font-mono select-none">Blocks:</span>
+                          <span className="text-[9px] uppercase tracking-wider text-zinc-300 font-bold mr-1.5 font-mono select-none">Blocks:</span>
                           {(['ALL', 'SIGNED', 'PENDING'] as const).map((st) => (
                             <button
                               key={st}
@@ -3833,7 +3833,7 @@ export default function App() {
 
                         {/* Delta conversion filter tabs */}
                         <div className="md:col-span-4 flex flex-wrap gap-1.5 items-center">
-                          <span className="text-[9px] uppercase tracking-wider text-zinc-500 font-bold mr-1.5 font-mono select-none">Delta:</span>
+                          <span className="text-[9px] uppercase tracking-wider text-zinc-300 font-bold mr-1.5 font-mono select-none">Delta:</span>
                           {(['ALL', 'INCREASE', 'DECREASE', 'NEUTRAL'] as const).map((act) => (
                             <button
                               key={act}
@@ -3855,7 +3855,7 @@ export default function App() {
                       </div>
 
                       {/* Summary status tag count indicators with Interactive Simulator Toggle */}
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[9px] text-zinc-500 font-mono border-t border-zinc-900 pt-3 select-none">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[9px] text-zinc-300 font-mono border-t border-zinc-900 pt-3 select-none">
                         <div className="flex items-center gap-1.5">
                           <Filter size={10} className="text-zinc-400" />
                           <span>Matched results: <strong className="text-zinc-300">{displayedLedger.length}</strong> of {isForcedEmptyStore ? 0 : ledger.length} entries registered</span>
@@ -3899,15 +3899,15 @@ export default function App() {
 
                     {/* DUAL MODE LAYOUT ENGINE */}
                     {displayedLedger.length === 0 ? (
-                      <div className="py-12 text-center text-zinc-500 bg-zinc-900/10 border border-zinc-900/60">
+                      <div className="py-12 text-center text-zinc-300 bg-zinc-900/10 border border-zinc-900/60">
                         <div className="max-w-md mx-auto space-y-4 font-mono">
                           <div className="w-12 h-12 rounded-full bg-zinc-950 border border-zinc-850 flex items-center justify-center text-zinc-600 mx-auto">
                             <Database size={18} />
                           </div>
                           <div>
-                            <span className="text-[10px] uppercase font-black tracking-wider text-zinc-650 block">LEDGER_EMPTY_INDEX</span>
+                            <span className="text-xs font-semibold tracking-wider uppercase font-black tracking-wider text-zinc-650 block">LEDGER_EMPTY_INDEX</span>
                             <h4 className="text-xs font-bold text-zinc-400 mt-1 uppercase">No Matched Transactions found</h4>
-                            <p className="text-[10px] text-zinc-600 mt-1.5 leading-relaxed text-center">
+                            <p className="text-xs font-semibold tracking-wider text-zinc-600 mt-1.5 leading-relaxed text-center">
                               There are no logs found matching your active filter criteria, or the session registry is vacant.
                             </p>
                           </div>
@@ -3931,9 +3931,9 @@ export default function App() {
                       <>
                         {/* 1. DESKTOP VIEW LAYOUT: Tabular Spacing Grid */}
                         <div className="hidden md:block overflow-x-auto border border-zinc-900 bg-zinc-950/20">
-                          <table className="w-full text-left border-collapse font-mono text-[10px]">
+                          <table className="w-full text-left border-collapse font-mono text-xs font-semibold tracking-wider">
                             <thead>
-                              <tr className="border-b border-zinc-900 bg-zinc-900/20 text-zinc-500 font-bold uppercase tracking-wider text-[9px] select-none">
+                              <tr className="border-b border-zinc-900 bg-zinc-900/20 text-zinc-300 font-bold uppercase tracking-wider text-[9px] select-none">
                                 <th onClick={() => changeSort('id')} className="py-3 px-4 font-bold cursor-pointer hover:bg-zinc-900/40 hover:text-zinc-300 transition-colors">
                                   <div className="flex items-center gap-1">
                                     Tx ID
@@ -3946,7 +3946,7 @@ export default function App() {
                                     <ArrowUpDown size={10} className={ledgerSortField === 'time' ? 'text-indigo-400' : 'text-zinc-600'} />
                                   </div>
                                 </th>
-                                <th className="py-3 px-4 font-bold text-zinc-500">
+                                <th className="py-3 px-4 font-bold text-zinc-300">
                                   Execution Operation
                                 </th>
                                 <th onClick={() => changeSort('sats')} className="py-3 px-4 font-bold cursor-pointer hover:bg-zinc-900/40 hover:text-zinc-300 transition-colors text-right">
@@ -3967,10 +3967,10 @@ export default function App() {
                                     <ArrowUpDown size={10} className={ledgerSortField === 'verified' ? 'text-indigo-400' : 'text-zinc-600'} />
                                   </div>
                                 </th>
-                                <th className="py-3 px-4 font-bold text-right text-zinc-500">
+                                <th className="py-3 px-4 font-bold text-right text-zinc-300">
                                   Raw Audit Hash
                                 </th>
-                                <th className="py-3 px-4 font-bold text-center text-zinc-500 w-12">
+                                <th className="py-3 px-4 font-bold text-center text-zinc-300 w-12">
                                   Inspect
                                 </th>
                               </tr>
@@ -4008,7 +4008,7 @@ export default function App() {
                                               } catch (err) {}
                                             }}
                                             title="Copy Transaction ID"
-                                            className="opacity-0 group-hover:opacity-100 p-1 text-zinc-500 hover:text-indigo-400 hover:bg-zinc-905 transition-all text-[8px] tracking-widest font-mono"
+                                            className="opacity-0 group-hover:opacity-100 p-1 text-zinc-300 hover:text-indigo-400 hover:bg-zinc-905 transition-all text-[8px] tracking-widest font-mono"
                                           >
                                             {isJustCopied ? (
                                               <span className="text-[8px] font-bold text-emerald-400 animate-pulse bg-emerald-950/40 px-1 py-0.5 border border-emerald-500/20">COPIED! ✓</span>
@@ -4068,7 +4068,7 @@ export default function App() {
                                           : entry.signature}
                                       </td>
 
-                                      <td className="py-3 px-4 text-center text-zinc-500">
+                                      <td className="py-3 px-4 text-center text-zinc-300">
                                         {isExpanded ? (
                                           <ChevronUp size={11} className="text-indigo-400 mx-auto" />
                                         ) : (
@@ -4091,8 +4091,8 @@ export default function App() {
                                               
                                               {/* Payload statistics */}
                                               <div className="md:col-span-4 space-y-2 border-r border-zinc-900 pr-5">
-                                                <div className="text-[9px] text-zinc-500 uppercase tracking-widest font-extrabold font-mono">TRANSACTION DETAILED AUDIT</div>
-                                                <div className="text-[11px] space-y-1 font-mono">
+                                                <div className="text-[9px] text-zinc-300 uppercase tracking-widest font-extrabold font-mono">TRANSACTION DETAILED AUDIT</div>
+                                                <div className="text-xs font-semibold space-y-1 font-mono">
                                                   <div>• Identifier: <strong className="text-zinc-200 font-semibold">{entry.id}</strong></div>
                                                   <div>• Exact Epoch: <strong className="text-zinc-300 font-semibold">{entry.time}</strong></div>
                                                   <div>• Core Verifier: <span className="text-emerald-400 font-medium">SECP256K1 LOCAL SIGNATURE</span></div>
@@ -4103,7 +4103,7 @@ export default function App() {
                                               {/* Full security signature hash copy */}
                                               <div className="md:col-span-8 flex flex-col justify-between">
                                                 <div className="space-y-1">
-                                                  <div className="text-[9px] text-zinc-500 uppercase tracking-widest font-extrabold font-mono flex items-center justify-between">
+                                                  <div className="text-[9px] text-zinc-300 uppercase tracking-widest font-extrabold font-mono flex items-center justify-between">
                                                     <span>Block Cryptographic Fingerprint (SHA-256)</span>
                                                     <button
                                                       onClick={(e) => {
@@ -4119,7 +4119,7 @@ export default function App() {
                                                       <Copy size={9} /> Copy Full Hash
                                                     </button>
                                                   </div>
-                                                  <div className="bg-zinc-950 border border-zinc-900 p-2.5 text-zinc-300 font-sans break-all text-[10px] tracking-wide font-mono rounded">
+                                                  <div className="bg-zinc-950 border border-zinc-900 p-2.5 text-zinc-300 font-sans break-all text-xs font-semibold tracking-wider tracking-wide font-mono rounded">
                                                     {entry.signature}f8a1005b874cdeaa0a58b8d9600e12d4a1efcbd78e90ff812903ab817ef
                                                   </div>
                                                 </div>
@@ -4134,7 +4134,7 @@ export default function App() {
                                             </div>
 
                                             {/* Visual Graph Layout Alignment Block Flow */}
-                                            <div className="mt-3 bg-zinc-900/30 p-2 text-center rounded flex items-center justify-center gap-2 flex-wrap text-[9px] text-zinc-500 border border-zinc-900/60">
+                                            <div className="mt-3 bg-zinc-900/30 p-2 text-center rounded flex items-center justify-center gap-2 flex-wrap text-[9px] text-zinc-300 border border-zinc-900/60">
                                               <span className="text-emerald-500 font-mono font-bold">FLOW_SATS: {entry.sats.toLocaleString()}</span>
                                               <span>&rarr;</span>
                                               <span className="text-amber-500 font-mono font-bold">FLOW_BTC: {entry.btc.toFixed(8)}</span>
@@ -4171,7 +4171,7 @@ export default function App() {
                                 {/* Header with ID and Copier */}
                                 <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-zinc-900">
                                   <div className="flex items-center gap-1.5">
-                                    <span className="text-[11px] font-black text-zinc-200 font-mono">{entry.id}</span>
+                                    <span className="text-xs font-semibold font-black text-zinc-200 font-mono">{entry.id}</span>
                                     <button
                                       onClick={(e) => {
                                         e.stopPropagation();
@@ -4195,7 +4195,7 @@ export default function App() {
                                 </div>
 
                                 {/* Body stats */}
-                                <div className="py-2.5 space-y-1.5 font-mono text-[10px]">
+                                <div className="py-2.5 space-y-1.5 font-mono text-xs font-semibold tracking-wider">
                                   <div className="text-zinc-300 font-medium">
                                     <span className="text-zinc-650 uppercase font-bold text-[8.5px] block">Operation:</span>
                                     {entry.action}
@@ -4253,7 +4253,7 @@ export default function App() {
                                     <div className="text-zinc-300 bg-zinc-900/60 p-2.5 rounded font-bold overflow-x-auto select-all text-left break-all font-mono leading-relaxed">
                                       {entry.signature}f8a1005b874cdeaa0a58b8d9600e12d4a1efcbd...
                                     </div>
-                                    <div className="flex justify-between items-center text-[8.5px] text-zinc-500 pt-1">
+                                    <div className="flex justify-between items-center text-[8.5px] text-zinc-300 pt-1">
                                       <span>Model Parity: PASSED [VERIFIED]</span>
                                       <span className="text-emerald-500 uppercase font-bold">100% Compliant</span>
                                     </div>
@@ -4291,7 +4291,7 @@ export default function App() {
                 >
                   <span>&larr; Back to Converter Core</span>
                 </button>
-                <div className="text-[10px] uppercase font-bold tracking-widest text-indigo-400 font-mono">
+                <div className="text-xs font-semibold tracking-wider uppercase font-bold tracking-widest text-indigo-400 font-mono">
                   {activeTab === 'pricing' ? 'Premium Edition Plans' : 'Low Latency Micro-System Engine'}
                 </div>
               </div>
@@ -4303,7 +4303,7 @@ export default function App() {
                     <h2 className="text-3xl font-extrabold tracking-tight font-sans bg-gradient-to-r from-zinc-100 via-indigo-200 to-zinc-150 bg-clip-text text-transparent">
                       SatStacker Environment & Plans Studio
                     </h2>
-                    <p className="text-sm text-zinc-400 max-w-2xl mx-auto font-sans leading-relaxed">
+                    <p className="text-base sm:text-lg text-zinc-200 leading-relaxed max-w-2xl mx-auto font-sans leading-relaxed">
                       Select your operational environment. Upgrading unlocks custom audio alerts, premium strategies, offline backup exports, and custom Webhook integrations.
                     </p>
 
@@ -4316,10 +4316,10 @@ export default function App() {
                             setBillingCycle('monthly');
                             if (soundEnabled) playCustomTone(500, 0.05);
                           }}
-                          className={`px-4 py-1.5 text-[10px] uppercase font-bold tracking-wider transition-all cursor-pointer ${
+                          className={`px-4 py-1.5 text-xs font-semibold tracking-wider uppercase font-bold tracking-wider transition-all cursor-pointer ${
                             billingCycle === 'monthly'
                               ? 'bg-zinc-900 border border-zinc-800 text-indigo-400 font-extrabold shadow-md'
-                              : 'text-zinc-500 hover:text-zinc-300'
+                              : 'text-zinc-300 hover:text-zinc-300'
                           }`}
                         >
                           Monthly Tier
@@ -4329,10 +4329,10 @@ export default function App() {
                             setBillingCycle('annual');
                             if (soundEnabled) playCustomTone(600, 0.05);
                           }}
-                          className={`px-4 py-1.5 text-[10px] uppercase font-bold tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
+                          className={`px-4 py-1.5 text-xs font-semibold tracking-wider uppercase font-bold tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
                             billingCycle === 'annual'
                               ? 'bg-zinc-900 border border-zinc-800 text-emerald-455 font-extrabold shadow-md'
-                              : 'text-zinc-500 hover:text-zinc-300'
+                              : 'text-zinc-300 hover:text-zinc-300'
                           }`}
                         >
                           Annual Billing <span className="bg-emerald-500/10 text-emerald-400 text-[8px] font-black px-1.5 py-0.5 rounded-md text-nowrap">Save 20%</span>
@@ -4346,7 +4346,7 @@ export default function App() {
                           placeholder="ENTER PROMO CODE"
                           value={promoCode}
                           onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
-                          className="bg-transparent border-none text-[10px] px-3 py-1 outline-none text-zinc-100 w-36 uppercase"
+                          className="bg-transparent border-none text-xs font-semibold tracking-wider px-3 py-1 outline-none text-zinc-100 w-36 uppercase"
                         />
                         <button
                           onClick={() => {
@@ -4390,12 +4390,12 @@ export default function App() {
                       <div className="space-y-4">
                         <div>
                           <h3 className="text-zinc-350 text-xs font-mono font-bold tracking-widest uppercase mb-1">Standard Stacker</h3>
-                          <p className="text-[10px] text-zinc-500 font-sans">Essential local conversion & basic streak logging tools.</p>
+                          <p className="text-xs font-semibold tracking-wider text-zinc-300 font-sans">Essential local conversion & basic streak logging tools.</p>
                         </div>
                         
                         <div className="py-2 border-b border-zinc-900">
                           <span className="text-3xl font-black font-sans leading-none text-zinc-100">$0</span>
-                          <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-mono block mt-1">FREE FOREVER</span>
+                          <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest font-mono block mt-1">FREE FOREVER</span>
                         </div>
 
                         <ul className="text-[10.5px] font-sans space-y-3 pt-2 text-zinc-400">
@@ -4425,7 +4425,7 @@ export default function App() {
                       <div className="pt-6 font-mono">
                         <button
                           disabled
-                          className="w-full py-2 bg-zinc-900 border border-zinc-850 text-zinc-500 text-[10px] uppercase font-bold text-center cursor-not-allowed rounded-xl"
+                          className="w-full py-2 bg-zinc-900 border border-zinc-850 text-zinc-300 text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase font-bold text-center cursor-not-allowed rounded-xl"
                         >
                           Default Sandbox Active
                         </button>
@@ -4455,7 +4455,7 @@ export default function App() {
                             <Sparkles size={11} className="text-indigo-400 animate-pulse" />
                             DCA Pro
                           </h3>
-                          <p className="text-[10px] text-zinc-400 font-sans">Automated price triggers, webhook streams, and unlimited streaks.</p>
+                          <p className="text-xs font-semibold tracking-wider text-zinc-400 font-sans">Automated price triggers, webhook streams, and unlimited streaks.</p>
                         </div>
 
                         <div className="py-2 border-b border-zinc-900">
@@ -4465,9 +4465,9 @@ export default function App() {
                                 ? (promoApplied ? (39 * (1 - promoDiscount / 100)).toFixed(0) : '39')
                                 : (promoApplied ? (49 * (1 - promoDiscount / 100)).toFixed(0) : '49')}
                             </span>
-                            <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-mono">/ mo</span>
+                            <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest font-mono">/ mo</span>
                           </div>
-                          <span className="text-[8px] text-zinc-500 uppercase tracking-widest font-mono block mt-1">
+                          <span className="text-[8px] text-zinc-300 uppercase tracking-widest font-mono block mt-1">
                             {billingCycle === 'annual' 
                               ? `Billed annually ($${promoApplied ? (39 * 12 * (1 - promoDiscount / 100)).toFixed(0) : '468'}/yr)` 
                               : "Billed monthly, cancel anytime"}
@@ -4507,7 +4507,7 @@ export default function App() {
                               if (soundEnabled) playCustomTone(650, 0.08);
                             }
                           }}
-                          className={`w-full py-2 font-black text-[10px] uppercase tracking-wider text-center transition-all cursor-pointer rounded-xl ${
+                          className={`w-full py-2 font-black text-xs font-semibold tracking-wider uppercase tracking-wider text-center transition-all cursor-pointer rounded-xl ${
                             isPremium && selectedPlanUpgradeName === 'pro'
                               ? 'bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:scale-[1.01]' 
                               : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-[0_4px_16px_rgba(79,70,229,0.35)] hover:scale-[1.01]'
@@ -4540,7 +4540,7 @@ export default function App() {
                             <ShieldCheck size={11} className="text-emerald-400" />
                             Sovereign Lifetime
                           </h3>
-                          <p className="text-[10px] text-zinc-400 font-sans">Single lifetime purchase, fully client-sided privacy.</p>
+                          <p className="text-xs font-semibold tracking-wider text-zinc-400 font-sans">Single lifetime purchase, fully client-sided privacy.</p>
                         </div>
 
                         <div className="py-2 border-b border-zinc-900">
@@ -4548,7 +4548,7 @@ export default function App() {
                             <span className="text-3xl font-black font-sans leading-none text-zinc-100">
                               ${promoApplied ? (199 * (1 - promoDiscount / 100)).toFixed(0) : '199'}
                             </span>
-                            <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-mono">/ custom</span>
+                            <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest font-mono">/ custom</span>
                           </div>
                           <span className="text-[8px] text-emerald-400 uppercase tracking-widest font-mono block mt-1">
                             No subscription, local-first offline storage
@@ -4588,7 +4588,7 @@ export default function App() {
                               if (soundEnabled) playCustomTone(650, 0.08);
                             }
                           }}
-                          className={`w-full py-2 font-black text-[10px] uppercase tracking-wider text-center transition-all cursor-pointer rounded-xl ${
+                          className={`w-full py-2 font-black text-xs font-semibold tracking-wider uppercase tracking-wider text-center transition-all cursor-pointer rounded-xl ${
                             isPremium && selectedPlanUpgradeName === 'sovereign'
                               ? 'bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:scale-[1.01]' 
                               : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_4px_16px_rgba(16,185,129,0.35)] hover:scale-[1.01]'
@@ -4614,7 +4614,7 @@ export default function App() {
                             <h4 className="text-xs font-black uppercase text-indigo-400 tracking-wider">
                               COINBASE SANDBOX PAYMENT GATEWAY
                             </h4>
-                            <p className="text-[9px] text-zinc-500">
+                            <p className="text-[9px] text-zinc-300">
                               Standard sandbox test gateway. Feel free to use test values to complete the upgrade.
                             </p>
                           </div>
@@ -4623,15 +4623,15 @@ export default function App() {
                               setShowCheckoutWizard(false);
                               if (soundEnabled) playCustomTone(400, 0.05);
                             }}
-                            className="text-[10px] uppercase font-bold text-zinc-500 hover:text-rose-400 cursor-pointer"
+                            className="text-xs font-semibold tracking-wider uppercase font-bold text-zinc-300 hover:text-rose-400 cursor-pointer"
                           >
                             [✕] Close Gateway
                           </button>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-3 text-[10px]">
+                        <div className="grid grid-cols-2 gap-3 text-xs font-semibold tracking-wider">
                           <div className="col-span-2 space-y-1">
-                            <label className="text-zinc-500 uppercase tracking-wider block">Plan selected</label>
+                            <label className="text-zinc-300 uppercase tracking-wider block">Plan selected</label>
                             <div className="bg-zinc-900 border border-zinc-805 px-3 py-2 rounded-lg text-zinc-200 font-extrabold flex justify-between items-center">
                               <span className="uppercase">{selectedPlanUpgradeName === 'pro' ? 'Enterprise PRO Plan' : 'Sovereign Lifetime License'}</span>
                               <span className="text-indigo-400">
@@ -4645,7 +4645,7 @@ export default function App() {
                           </div>
 
                           <div className="col-span-2 space-y-1">
-                            <label className="text-zinc-500 uppercase tracking-wider block">Cardholder Name</label>
+                            <label className="text-zinc-300 uppercase tracking-wider block">Cardholder Name</label>
                             <input
                               type="text"
                               value={billingCardName}
@@ -4656,7 +4656,7 @@ export default function App() {
                           </div>
 
                           <div className="col-span-2 space-y-1">
-                            <label className="text-zinc-500 uppercase tracking-wider block flex justify-between">
+                            <label className="text-zinc-300 uppercase tracking-wider block flex justify-between">
                               <span>Credit Card Number</span>
                               <span className="text-[8px] text-indigo-400 font-bold">
                                 {billingCardNumber.replace(/\s/g, '').startsWith('4') ? 'VISA CLIENT' : billingCardNumber.replace(/\s/g, '').startsWith('5') ? 'MASTERCARD' : billingCardNumber.replace(/\s/g, '').startsWith('3') ? 'AMEX CORE' : 'SANDBOX CRD'}
@@ -4680,7 +4680,7 @@ export default function App() {
                           </div>
 
                           <div className="col-span-1 space-y-1">
-                            <label className="text-zinc-500 uppercase tracking-wider block">Expiry date</label>
+                            <label className="text-zinc-300 uppercase tracking-wider block">Expiry date</label>
                             <input
                               type="text"
                               value={billingCardExpiry}
@@ -4699,7 +4699,7 @@ export default function App() {
                           </div>
 
                           <div className="col-span-1 space-y-1">
-                            <label className="text-zinc-500 uppercase tracking-wider block">CVV</label>
+                            <label className="text-zinc-300 uppercase tracking-wider block">CVV</label>
                             <input
                               type="password"
                               value={billingCardCcv}
@@ -4734,7 +4734,7 @@ export default function App() {
                               }, 1600);
                             }}
                             disabled={checkoutProcessing}
-                            className="w-full py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-[10px] font-black uppercase tracking-wider rounded-xl cursor-pointer disabled:opacity-50 select-none flex items-center justify-center gap-1.5"
+                            className="w-full py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-semibold tracking-wider font-black uppercase tracking-wider rounded-xl cursor-pointer disabled:opacity-50 select-none flex items-center justify-center gap-1.5"
                           >
                             {checkoutProcessing ? (
                               <span className="flex items-center gap-1">
@@ -4751,12 +4751,12 @@ export default function App() {
 
                   {/* Specification Grid comparison matrix */}
                   <div className="bg-zinc-950/60 border border-zinc-900 rounded-2xl p-6 text-left space-y-4">
-                    <span className="text-[10px] uppercase tracking-wider font-mono text-zinc-400 font-extrabold block">
+                    <span className="text-xs font-semibold tracking-wider uppercase tracking-wider font-mono text-zinc-400 font-extrabold block">
                       LOW-LATENCY SPECIFICATION COMPARISON MATRIX
                     </span>
 
                     <div className="space-y-3 font-mono text-[10.5px]">
-                      <div className="grid grid-cols-3 pb-2 border-b border-zinc-900 text-zinc-500 font-black">
+                      <div className="grid grid-cols-3 pb-2 border-b border-zinc-900 text-zinc-300 font-black">
                         <span>PARAMETER</span>
                         <span>STANDARD</span>
                         <span className="text-indigo-400 flex items-center gap-1">
@@ -4765,7 +4765,7 @@ export default function App() {
                       </div>
 
                       <div className="grid grid-cols-3 pb-1 border-b border-zinc-900/45 text-zinc-450">
-                        <span className="text-zinc-500">Live Streak Shields</span>
+                        <span className="text-zinc-300">Live Streak Shields</span>
                         <span>Max 2 Shields</span>
                         <span className="text-emerald-400 font-black flex items-center gap-1">
                           <ShieldCheck size={11} className="text-emerald-400 animate-pulse" /> Unlimited (∞) Protection
@@ -4773,25 +4773,25 @@ export default function App() {
                       </div>
 
                       <div className="grid grid-cols-3 pb-1 border-b border-zinc-900/45 text-zinc-450">
-                        <span className="text-zinc-500">Alert Latency Channel</span>
+                        <span className="text-zinc-300">Alert Latency Channel</span>
                         <span>Audio Oscillative Synth</span>
                         <span className="text-emerald-400 font-black">Discord + Custom WebHooks Alerts</span>
                       </div>
 
                       <div className="grid grid-cols-3 pb-1 border-b border-zinc-900/45 text-zinc-450">
-                        <span className="text-zinc-500">Sandbox DCA Strategist</span>
+                        <span className="text-zinc-300">Sandbox DCA Strategist</span>
                         <span>Manual SATS Convert Only</span>
                         <span className="text-emerald-400 font-black">Continuous Strategies Execution Logs</span>
                       </div>
 
                       <div className="grid grid-cols-3 pb-1 border-b border-zinc-900/45 text-zinc-450">
-                        <span className="text-zinc-500">Ledger Buffer Memory</span>
+                        <span className="text-zinc-300">Ledger Buffer Memory</span>
                         <span>Last 40 Transactions Limit</span>
                         <span className="text-emerald-400 font-black">Infinite CRYPTEX Local SQLite DB</span>
                       </div>
 
                       <div className="grid grid-cols-3 text-zinc-450">
-                        <span className="text-zinc-500">Execution Thread Priority</span>
+                        <span className="text-zinc-300">Execution Thread Priority</span>
                         <span>Synchronous UI Main Thread</span>
                         <span className="text-emerald-400 font-black">Simulated Async WebWorker Instances</span>
                       </div>
@@ -4809,7 +4809,7 @@ export default function App() {
                           <ShieldCheck size={20} className="animate-pulse" />
                         </div>
                         <h4 className="text-xs uppercase font-mono font-black tracking-widest text-zinc-250">PRO Integrations Console Locked</h4>
-                        <p className="text-[10px] text-zinc-500 max-w-sm mt-1 leading-relaxed font-mono">
+                        <p className="text-xs font-semibold tracking-wider text-zinc-300 max-w-sm mt-1 leading-relaxed font-mono">
                           Upgrading unlocks real configuration controls for external Discord/Slack Webhooks, algorithmic DCA schedulers, and local backup sweepers.
                         </p>
                         <button
@@ -4821,7 +4821,7 @@ export default function App() {
                             }
                             showToast("PRO Edition active. Integrations Console unlocked!", "success");
                           }}
-                          className="mt-3.5 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-495 text-white font-bold text-[10px] uppercase font-mono tracking-widest cursor-pointer shadow-[0_2px_8px_rgba(79,70,229,0.3)]"
+                          className="mt-3.5 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-495 text-white font-bold text-xs font-semibold tracking-wider uppercase font-mono tracking-widest cursor-pointer shadow-[0_2px_8px_rgba(79,70,229,0.3)]"
                         >
                           Unlock PRO Features &rarr;
                         </button>
@@ -4834,12 +4834,12 @@ export default function App() {
                           <Sliders size={14} className="text-indigo-400 animate-pulse" />
                           PRO Alert Dispatcher & Operations Console
                         </h4>
-                        <p className="text-[9px] text-zinc-500 font-mono uppercase mt-0.5">
+                        <p className="text-[9px] text-zinc-300 font-mono uppercase mt-0.5">
                           Set up automated Discord dispatch triggers and manage programmable DCA purchase strategies.
                         </p>
                       </div>
                       <div className="flex items-center gap-2 font-mono text-[9px] bg-zinc-950 border border-zinc-900 px-2 py-1">
-                        <span className="text-zinc-500">ROUTER STATUS:</span>
+                        <span className="text-zinc-300">ROUTER STATUS:</span>
                         <span className="text-emerald-400 font-bold animate-pulse">PRO ACTIVE (SIMULATION)</span>
                       </div>
                     </div>
@@ -4852,29 +4852,29 @@ export default function App() {
                             <Activity size={10} className="text-indigo-455" />
                             1. DISCORD WEBHOOK ALERT CONFIGURATION
                           </span>
-                          <p className="text-[9px] text-zinc-500 leading-relaxed font-mono">
+                          <p className="text-[9px] text-zinc-300 leading-relaxed font-mono">
                             Test automatic JSON payloads from your SatStacker instance when price milestones or streak recovery shields trigger.
                           </p>
                         </div>
 
                         <div className="space-y-3 p-4 bg-zinc-900/60 border border-zinc-850 rounded-none font-mono">
                           <div className="space-y-1">
-                            <label className="text-[8px] uppercase font-mono text-zinc-500 font-bold block">Discord Target Server Endpoint:</label>
+                            <label className="text-[8px] uppercase font-mono text-zinc-300 font-bold block">Discord Target Server Endpoint:</label>
                             <input
                               type="text"
                               value={webhookUrl}
                               onChange={(e) => setWebhookUrl(e.target.value)}
-                              className="w-full bg-zinc-950 border border-zinc-800 text-[10px] text-zinc-300 px-2.5 py-1.5 focus:outline-none focus:border-indigo-600 rounded-none font-mono"
+                              className="w-full bg-zinc-950 border border-zinc-800 text-xs font-semibold tracking-wider text-zinc-300 px-2.5 py-1.5 focus:outline-none focus:border-indigo-600 rounded-none font-mono"
                             />
                           </div>
 
                           <div className="grid grid-cols-2 gap-3">
                             <div className="space-y-1">
-                              <label className="text-[8px] uppercase font-mono text-zinc-500 font-bold block">Alert Trigger Pattern:</label>
+                              <label className="text-[8px] uppercase font-mono text-zinc-300 font-bold block">Alert Trigger Pattern:</label>
                               <select
                                 value={alertTriggerType}
                                 onChange={(e) => setAlertTriggerType(e.target.value)}
-                                className="w-full bg-zinc-950 border border-zinc-800 text-[10px] text-zinc-300 p-1.5 focus:outline-none focus:border-indigo-600 rounded-none font-mono"
+                                className="w-full bg-zinc-950 border border-zinc-800 text-xs font-semibold tracking-wider text-zinc-300 p-1.5 focus:outline-none focus:border-indigo-600 rounded-none font-mono"
                               >
                                 <option value="streak_saved">🛡️ Streak Saved by Shield</option>
                                 <option value="drift_failure">⚠️ Price Volatility Warning</option>
@@ -4940,9 +4940,9 @@ export default function App() {
                                   }, 1200);
                                 }}
                                 disabled={isSendingWebhook}
-                                className={`w-full py-1.5 font-bold uppercase tracking-wider text-[10px] font-mono cursor-pointer border flex justify-center items-center gap-1.5 transition-colors ${
+                                className={`w-full py-1.5 font-bold uppercase tracking-wider text-xs font-semibold tracking-wider font-mono cursor-pointer border flex justify-center items-center gap-1.5 transition-colors ${
                                   isSendingWebhook 
-                                    ? 'bg-zinc-950 border-zinc-900 text-zinc-500 cursor-not-allowed'
+                                    ? 'bg-zinc-950 border-zinc-900 text-zinc-300 cursor-not-allowed'
                                     : 'bg-emerald-950/80 border-emerald-500 hover:bg-emerald-900 text-emerald-300'
                                 }`}
                               >
@@ -4965,7 +4965,7 @@ export default function App() {
                             <span>📡 Live Discord Request Stream Proxy Logs</span>
                             <button 
                               onClick={() => setWebhookLogs(["[SYSTEM] Webhook channel listener standby. Route initialized."])}
-                              className="text-zinc-500 hover:text-zinc-350 underline cursor-pointer"
+                              className="text-zinc-300 hover:text-zinc-350 underline cursor-pointer"
                             >
                               clear
                             </button>
@@ -4980,7 +4980,7 @@ export default function App() {
                                     ? 'text-rose-400 font-bold'
                                     : log.includes('INFO:') || log.includes('POST')
                                       ? 'text-indigo-400 font-bold' 
-                                      : 'text-zinc-500'
+                                      : 'text-zinc-300'
                               }
                             >
                               {log}
@@ -5004,7 +5004,7 @@ export default function App() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {/* Strategies checkbox card list */}
                           <div className="p-4 bg-zinc-900/60 border border-zinc-850 rounded-none space-y-3 font-mono">
-                            <span className="text-[8px] uppercase tracking-widest text-zinc-500 font-bold block mb-1">ARM ALGORITHMIC STRATEGIES:</span>
+                            <span className="text-[8px] uppercase tracking-widest text-zinc-300 font-bold block mb-1">ARM ALGORITHMIC STRATEGIES:</span>
 
                             <div className="space-y-2.5">
                               {/* Strategy 1 */}
@@ -5034,7 +5034,7 @@ export default function App() {
                                       {activeStrategies.includes('strategy_dca') ? '● ARMED' : 'STANDBY'}
                                     </span>
                                   </div>
-                                  <span className="text-[8px] text-zinc-500 block">DCA-buy 1,000 Sats every 10 volatility checks automatically.</span>
+                                  <span className="text-[8px] text-zinc-300 block">DCA-buy 1,000 Sats every 10 volatility checks automatically.</span>
                                 </div>
                               </div>
 
@@ -5065,7 +5065,7 @@ export default function App() {
                                       {activeStrategies.includes('strategy_symmetry') ? '● ARMED' : 'STANDBY'}
                                     </span>
                                   </div>
-                                  <span className="text-[8px] text-zinc-500 block">Ensures Satoshi fractional math matches perfectly on live price loops.</span>
+                                  <span className="text-[8px] text-zinc-300 block">Ensures Satoshi fractional math matches perfectly on live price loops.</span>
                                 </div>
                               </div>
 
@@ -5096,7 +5096,7 @@ export default function App() {
                                       {activeStrategies.includes('strategy_bollinger') ? '● ARMED' : 'STANDBY'}
                                     </span>
                                   </div>
-                                  <span className="text-[8px] text-zinc-500 block">Automatically arms shields if volatility exceeds 2.5% in 2 ticks.</span>
+                                  <span className="text-[8px] text-zinc-300 block">Automatically arms shields if volatility exceeds 2.5% in 2 ticks.</span>
                                 </div>
                               </div>
                             </div>
@@ -5105,7 +5105,7 @@ export default function App() {
                           {/* Cron background automation trigger simulator */}
                           <div className="p-4 bg-zinc-900/60 border border-zinc-850 rounded-none space-y-3 font-mono flex flex-col justify-between">
                             <div>
-                              <span className="text-[8px] uppercase tracking-widest text-zinc-500 font-bold block mb-1">BACKGROUND TASK TICK RATE:</span>
+                              <span className="text-[8px] uppercase tracking-widest text-zinc-300 font-bold block mb-1">BACKGROUND TASK TICK RATE:</span>
                               <div className="space-y-2">
                                 <div>
                                   <label className="text-[8px] text-zinc-550 block font-bold mb-1">CRON EXPRESSION (Automated Ticker Checks):</label>
@@ -5113,10 +5113,10 @@ export default function App() {
                                     type="text"
                                     value={customCronString}
                                     onChange={(e) => setCustomCronString(e.target.value)}
-                                    className="w-full bg-zinc-950 border border-zinc-800 text-[10px] text-zinc-300 px-2.5 py-1.5 focus:outline-none focus:border-indigo-600 rounded-none font-mono"
+                                    className="w-full bg-zinc-950 border border-zinc-800 text-xs font-semibold tracking-wider text-zinc-300 px-2.5 py-1.5 focus:outline-none focus:border-indigo-600 rounded-none font-mono"
                                   />
                                 </div>
-                                <div className="text-[8px] text-zinc-500 leading-normal">
+                                <div className="text-[8px] text-zinc-300 leading-normal">
                                   Default cron compiles check tasks every 10 seconds. Ensures continuous status checks without keeping active client frame focus.
                                 </div>
                               </div>
@@ -5187,7 +5187,7 @@ export default function App() {
                                   <span>🔒 Cryptex Immutable State Seal Export (Encrypted payload)</span>
                                   <span className="text-emerald-400 font-black">COMPACT SECURE KEY</span>
                                 </div>
-                                <div className="text-zinc-500 leading-normal break-all font-mono">
+                                <div className="text-zinc-300 leading-normal break-all font-mono">
                                   {`{ "algorithm": "AES-256-GCM", "epoch": ${Math.floor(Date.now() / 1000)}, "payload_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "ledger_signatures": ["0x8fae120a30b2", "0xfa117cc210210", "0x12bb9bdfd8a4"], "integrity_seal": "ECD6-PROV-904B" }`}
                                 </div>
                               </motion.div>
@@ -5203,14 +5203,14 @@ export default function App() {
               {activeTab === 'about' && (
                 <div>
                   <h2 className="text-xl font-bold mb-2 uppercase tracking-wide text-zinc-100">SatStacker Standalone Architecture</h2>
-                  <p className="text-xs text-zinc-400 mb-6">
+                  <p className="text-base text-zinc-200 leading-relaxed mb-6">
                     An overview of the client-side execution framework, local data isolation, and live market feed synchronization.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
                     <div className="p-4 bg-zinc-950/60 border border-zinc-800/80 text-zinc-455 rounded-xl">
-                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-[11px] block mb-2">Live Feed Sync (Web Worker Thread)</span>
-                      <p className="leading-relaxed text-zinc-400 text-[11px] space-y-1">
+                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-xs font-semibold block mb-2">Live Feed Sync (Web Worker Thread)</span>
+                      <p className="leading-relaxed text-zinc-400 text-xs font-semibold space-y-1">
                         • Establishes a direct handshake with the official Coinbase WebSocket endpoint (<code className="text-zinc-300">wss://ws-feed.exchange.coinbase.com</code>) to retrieve high-frequency ticker feeds.<br />
                         • Performs data sanitization and processes raw float pricing asynchronously off the main UI rendering thread.<br />
                         • Eliminates micro-stuttering, keeping browser interactive frame rates locked at a steady 60 FPS under chaotic volatility events.
@@ -5218,8 +5218,8 @@ export default function App() {
                     </div>
 
                     <div className="p-4 bg-zinc-950/60 border border-zinc-800/80 text-zinc-455 rounded-xl">
-                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-[11px] block mb-2">Local Web Storage Persistence</span>
-                      <p className="leading-relaxed text-zinc-400 text-[11px] space-y-1">
+                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-xs font-semibold block mb-2">Local Web Storage Persistence</span>
+                      <p className="leading-relaxed text-zinc-400 text-xs font-semibold space-y-1">
                         • User transaction logs, streak preservation metrics, and custom parameters are committed strictly to client-side <code className="text-zinc-300">localStorage</code> databases.<br />
                         • Operates entirely as a sandbox environment; no personal financial assets, API keys, or operational sequences are transmitted outside of the locally isolated browser cache.<br />
                         • Secures transaction ledger history and custom threshold metrics between manual browser cache purges.
@@ -5227,8 +5227,8 @@ export default function App() {
                     </div>
 
                     <div className="p-4 bg-zinc-950/60 border border-zinc-800/80 text-zinc-400 rounded-xl">
-                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-[11px] block mb-2">Main Thread Coordination (Zustand)</span>
-                      <p className="leading-relaxed text-zinc-400 text-[11px] space-y-1">
+                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-xs font-semibold block mb-2">Main Thread Coordination (Zustand)</span>
+                      <p className="leading-relaxed text-zinc-400 text-xs font-semibold space-y-1">
                         • Performs lightweight math transformations (BTC ↔ Satoshi ↔ USD) instantaneously on input changes with zero event dispatching delay.<br />
                         • Powers the modular visual components, sound oscillators, physics canvas arrays, and streak status monitors in perfect layout harmony.<br />
                         • Restores cached local configurations on active component mount.
@@ -5236,8 +5236,8 @@ export default function App() {
                     </div>
 
                     <div className="p-4 bg-zinc-950/60 border border-zinc-800/80 text-zinc-400 rounded-xl">
-                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-[11px] block mb-2">Interactive Premium Simulation</span>
-                      <p className="leading-relaxed text-zinc-400 text-[11px] space-y-1">
+                      <span className="font-bold text-indigo-400 uppercase tracking-wider text-xs font-semibold block mb-2">Interactive Premium Simulation</span>
+                      <p className="leading-relaxed text-zinc-400 text-xs font-semibold space-y-1">
                         • Subscriptions are processed in a local sandbox context. Activating the Premium Edition unlocks mock payment receipts, premium sound waves, and unlimited streak protection settings instantly.<br />
                         • Offers a risk-free demonstration environment for evaluating professional tools, audio alarms, and rapid grid configurations.<br />
                         • Does not communicate with third-party billing providers or credit processors.
@@ -5252,8 +5252,8 @@ export default function App() {
         )}
 
         {/* PLATFORM CREDITS */}
-        <div className={`mt-10 py-6 border-t font-mono text-[10px] flex flex-col sm:flex-row items-center justify-between gap-4 ${
-          store.activeMode === 'stim' ? 'border-purple-900/20 text-purple-400/60' : 'border-zinc-800 text-zinc-500'
+        <div className={`mt-10 py-6 border-t font-mono text-xs font-semibold tracking-wider flex flex-col sm:flex-row items-center justify-between gap-4 ${
+          store.activeMode === 'stim' ? 'border-purple-900/20 text-purple-400/60' : 'border-zinc-800 text-zinc-300'
         }`}>
           <div>
             SATSTACKER v2.0.4 • BROWSER SANDBOX RUNTIME // LOCAL LEDGER SEQUENCE COMPLIANT
@@ -5323,7 +5323,7 @@ export default function App() {
               className="relative z-50 w-full max-w-md bg-zinc-950 border border-indigo-500/40 p-6 rounded-2xl shadow-[0_0_50px_rgba(99,102,241,0.25)] font-mono text-zinc-100"
             >
               {/* Corner tech tag */}
-              <div className="absolute top-3 right-4 text-[8px] text-zinc-500 uppercase tracking-widest font-mono select-none">
+              <div className="absolute top-3 right-4 text-[8px] text-zinc-300 uppercase tracking-widest font-mono select-none">
                 SatStacker Guide // Step {guidedTourStep} of 4
               </div>
 
@@ -5346,7 +5346,7 @@ export default function App() {
                       <h4 className="text-sm font-black uppercase text-zinc-100 font-sans tracking-tight">
                         1. Converter Core
                       </h4>
-                      <div className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">
+                      <div className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-wider font-bold">
                         Calculations & Tactile Effects
                       </div>
                     </div>
@@ -5370,7 +5370,7 @@ export default function App() {
                       <h4 className="text-sm font-black uppercase text-zinc-100 font-sans tracking-tight">
                         2. Live Price & Stress-Test Suite
                       </h4>
-                      <div className="text-[10px] text-amber-500 uppercase tracking-wider font-bold font-mono">
+                      <div className="text-xs font-semibold tracking-wider text-amber-500 uppercase tracking-wider font-bold font-mono">
                         WebSocket Ticker Alignment
                       </div>
                     </div>
@@ -5394,7 +5394,7 @@ export default function App() {
                       <h4 className="text-sm font-black uppercase text-zinc-100 font-sans tracking-tight">
                         3. Volatility Shields & Alerts
                       </h4>
-                      <div className="text-[10px] text-red-500 uppercase tracking-wider font-bold font-mono">
+                      <div className="text-xs font-semibold tracking-wider text-red-500 uppercase tracking-wider font-bold font-mono">
                         Streak Protection & Webhooks
                       </div>
                     </div>
@@ -5418,7 +5418,7 @@ export default function App() {
                       <h4 className="text-sm font-black uppercase text-zinc-100 font-sans tracking-tight">
                         4. Audited Transaction Ledger
                       </h4>
-                      <div className="text-[10px] text-emerald-400 uppercase tracking-wider font-bold font-mono">
+                      <div className="text-xs font-semibold tracking-wider text-emerald-400 uppercase tracking-wider font-bold font-mono">
                         Private CSV Spreadsheet Logs
                       </div>
                     </div>
@@ -5436,7 +5436,7 @@ export default function App() {
               <div className="mt-8 pt-4 border-t border-zinc-900 flex items-center justify-between font-mono">
                 <button
                   onClick={handleSkipTour}
-                  className="text-[10px] uppercase font-bold text-zinc-500 hover:text-zinc-350 cursor-pointer"
+                  className="text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase font-bold text-zinc-300 hover:text-zinc-350 cursor-pointer"
                 >
                   Skip Tour [✕]
                 </button>
@@ -5445,7 +5445,7 @@ export default function App() {
                   {guidedTourStep > 1 && (
                     <button
                       onClick={handlePrevTourStep}
-                      className="px-3 py-1.5 border border-zinc-800 bg-zinc-900 hover:bg-zinc-850 text-zinc-300 uppercase font-bold text-[10px] rounded cursor-pointer transition-colors"
+                      className="px-3 py-1.5 border border-zinc-800 bg-zinc-900 hover:bg-zinc-850 text-zinc-300 uppercase font-bold text-base font-semibold min-h-[44px] font-semibold tracking-wider rounded cursor-pointer transition-colors"
                     >
                       &larr; Back
                     </button>
@@ -5453,7 +5453,7 @@ export default function App() {
 
                   <button
                     onClick={handleNextTourStep}
-                    className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white uppercase font-black text-[10px] rounded cursor-pointer transition-all flex items-center gap-1 shadow-[0_0_15px_rgba(99,102,241,0.4)]"
+                    className="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white uppercase font-black text-base font-semibold min-h-[44px] font-semibold tracking-wider rounded cursor-pointer transition-all flex items-center gap-1 shadow-[0_0_15px_rgba(99,102,241,0.4)]"
                   >
                     {guidedTourStep === 4 ? 'Finish Guided Tour ✓' : 'Next Step &rarr;'}
                   </button>

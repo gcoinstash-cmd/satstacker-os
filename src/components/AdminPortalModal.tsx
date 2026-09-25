@@ -52,7 +52,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                 <h3 className="text-sm font-black font-mono tracking-wider text-white uppercase">
                   SatStacker Core // Institutional Control Center
                 </h3>
-                <p className="text-[10px] text-zinc-400 font-mono">
+                <p className="text-xs font-semibold tracking-wider text-zinc-400 font-mono">
                   Master Security Gateway & Real-Time Portfolio Telemetry
                 </p>
               </div>
@@ -76,7 +76,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                 <h4 className="text-lg font-bold text-white uppercase tracking-tight">
                   Restricted Operator Gateway
                 </h4>
-                <p className="text-xs text-zinc-400 mt-1 font-mono">
+                <p className="text-base text-zinc-200 leading-relaxed mt-1 font-mono">
                   Enter institutional bypass credential to unlock live ledger nodes, active user streaks, and WebSocket pipeline telemetry.
                 </p>
               </div>
@@ -85,7 +85,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               <button
                 type="button"
                 onClick={handleAutoFill}
-                className="w-full max-w-sm flex items-center justify-center gap-2 py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-mono font-bold tracking-wider transition-all duration-200 shadow-lg shadow-indigo-600/30 cursor-pointer"
+                className="w-full max-w-sm flex items-center justify-center gap-2 py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-base font-semibold min-h-[44px] font-mono font-bold tracking-wider transition-all duration-200 shadow-lg shadow-indigo-600/30 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>1-CLICK AUTO-FILL PASSKEY (satstacker2026)</span>
@@ -93,13 +93,13 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
 
               <div className="flex items-center gap-3 w-full max-w-sm">
                 <div className="h-[1px] bg-zinc-800 flex-1" />
-                <span className="text-[10px] font-mono text-zinc-600 uppercase">Or Manual Entry</span>
+                <span className="text-xs font-semibold tracking-wider font-mono text-zinc-600 uppercase">Or Manual Entry</span>
                 <div className="h-[1px] bg-zinc-800 flex-1" />
               </div>
 
               <form onSubmit={handleLogin} className="w-full max-w-sm space-y-3">
                 <div className="relative">
-                  <Key className="w-4 h-4 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Key className="w-4 h-4 text-zinc-300 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="password"
                     value={passkey}
@@ -110,7 +110,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                 </div>
 
                 {errorMsg && (
-                  <div className="flex items-center gap-2 text-rose-400 text-[11px] font-mono">
+                  <div className="flex items-center gap-2 text-rose-400 text-xs font-semibold font-mono">
                     <AlertCircle className="w-3.5 h-3.5" />
                     <span>{errorMsg}</span>
                   </div>
@@ -118,7 +118,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
 
                 <button
                   type="submit"
-                  className="w-full py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-mono font-semibold rounded-lg transition-colors cursor-pointer"
+                  className="w-full py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white text-base font-semibold min-h-[44px] font-mono font-semibold rounded-lg transition-colors cursor-pointer"
                 >
                   Verify Access Key
                 </button>
@@ -142,7 +142,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                     {tab}
                   </button>
                 ))}
-                <span className="ml-auto text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2 py-1 rounded border border-emerald-500/20">
+                <span className="ml-auto text-xs font-semibold tracking-wider text-emerald-400 font-bold bg-emerald-500/10 px-2 py-1 rounded border border-emerald-500/20">
                   ● OPERATOR AUTHENTICATED
                 </span>
               </div>
@@ -152,24 +152,24 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                   {/* KPI Cards */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono">
                     <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg">
-                      <span className="text-[10px] text-zinc-500 uppercase tracking-widest block">Aggregated Sats</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest block">Aggregated Sats</span>
                       <span className="text-xl font-bold text-white mt-1 block">8,492,100</span>
-                      <span className="text-[10px] text-emerald-400 mt-1 block">+12.4% this cycle</span>
+                      <span className="text-xs font-semibold tracking-wider text-emerald-400 mt-1 block">+12.4% this cycle</span>
                     </div>
                     <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg">
-                      <span className="text-[10px] text-zinc-500 uppercase tracking-widest block">Active Streaks</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest block">Active Streaks</span>
                       <span className="text-xl font-bold text-indigo-400 mt-1 block">1,482</span>
-                      <span className="text-[10px] text-zinc-400 mt-1 block">98.2% retention rate</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 block">98.2% retention rate</span>
                     </div>
                     <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg">
-                      <span className="text-[10px] text-zinc-500 uppercase tracking-widest block">Shield Tokens</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest block">Shield Tokens</span>
                       <span className="text-xl font-bold text-amber-400 mt-1 block">2,964</span>
-                      <span className="text-[10px] text-zinc-400 mt-1 block">Active protections</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 block">Active protections</span>
                     </div>
                     <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg">
-                      <span className="text-[10px] text-zinc-500 uppercase tracking-widest block">WebSocket Node</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-widest block">WebSocket Node</span>
                       <span className="text-xl font-bold text-emerald-400 mt-1 block">14ms</span>
-                      <span className="text-[10px] text-zinc-400 mt-1 block">Zero tick dropped</span>
+                      <span className="text-xs font-semibold tracking-wider text-zinc-400 mt-1 block">Zero tick dropped</span>
                     </div>
                   </div>
 
@@ -177,23 +177,23 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                   <div className="p-4 bg-zinc-900/40 border border-zinc-800 rounded-lg font-mono space-y-3">
                     <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
                       <span className="text-xs font-bold text-zinc-300 uppercase">System Cluster Health</span>
-                      <span className="text-[10px] text-emerald-400">99.98% SLA OK</span>
+                      <span className="text-xs font-semibold tracking-wider text-emerald-400">99.98% SLA OK</span>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
                       <div className="p-3 bg-black/40 border border-zinc-800/60 rounded">
-                        <span className="text-zinc-500 block text-[10px]">COINBASE WS FEED</span>
+                        <span className="text-zinc-300 block text-xs font-semibold tracking-wider">COINBASE WS FEED</span>
                         <span className="text-white font-bold block mt-1">wss://ws-feed.exchange.coinbase.com</span>
-                        <span className="text-emerald-400 text-[10px]">CONNECTED // ACTIVE</span>
+                        <span className="text-emerald-400 text-xs font-semibold tracking-wider">CONNECTED // ACTIVE</span>
                       </div>
                       <div className="p-3 bg-black/40 border border-zinc-800/60 rounded">
-                        <span className="text-zinc-500 block text-[10px]">PG_CRON AUTOMATION</span>
+                        <span className="text-zinc-300 block text-xs font-semibold tracking-wider">PG_CRON AUTOMATION</span>
                         <span className="text-white font-bold block mt-1">0 3 * * * (Nightly UTC)</span>
-                        <span className="text-emerald-400 text-[10px]">ENABLED // HEALTHY</span>
+                        <span className="text-emerald-400 text-xs font-semibold tracking-wider">ENABLED // HEALTHY</span>
                       </div>
                       <div className="p-3 bg-black/40 border border-zinc-800/60 rounded">
-                        <span className="text-zinc-500 block text-[10px]">RLS ENFORCEMENT</span>
+                        <span className="text-zinc-300 block text-xs font-semibold tracking-wider">RLS ENFORCEMENT</span>
                         <span className="text-white font-bold block mt-1">Row Level Security</span>
-                        <span className="text-emerald-400 text-[10px]">STRICT // ZERO LEAK</span>
+                        <span className="text-emerald-400 text-xs font-semibold tracking-wider">STRICT // ZERO LEAK</span>
                       </div>
                     </div>
                   </div>
@@ -204,7 +204,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                 <div className="space-y-4 font-mono text-xs">
                   <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg space-y-2">
                     <span className="text-zinc-400 font-bold uppercase block">// LIVE SOCKET TELEMETRY STREAM</span>
-                    <div className="p-3 bg-black/60 border border-zinc-800/80 rounded font-mono text-[11px] text-emerald-400/90 space-y-1">
+                    <div className="p-3 bg-black/60 border border-zinc-800/80 rounded font-mono text-xs font-semibold text-emerald-400/90 space-y-1">
                       <p>[11:24:02.102] WSS_TICK: BTC-USD @ $67,842.10 | Vol: 1,489.22 BTC</p>
                       <p>[11:24:03.490] CALC_WORKER: 10,000 sats = 0.00010000 BTC (Precision: exact)</p>
                       <p>[11:24:04.112] STREAK_VERIFY: User UUID 8fae120a30b2 preserved (2 Freeze Tokens)</p>
@@ -217,7 +217,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               {activeTab === 'users' && (
                 <div className="space-y-4 font-mono text-xs">
                   <table className="w-full text-left border border-zinc-800 rounded-lg overflow-hidden">
-                    <thead className="bg-zinc-900 text-zinc-400 text-[10px] uppercase">
+                    <thead className="bg-zinc-900 text-zinc-400 text-xs font-semibold tracking-wider uppercase">
                       <tr>
                         <th className="p-3">User ID</th>
                         <th className="p-3">Tier</th>
@@ -258,7 +258,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                   <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="font-bold text-white uppercase">Ledger Integrity Seal</span>
-                      <span className="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">
+                      <span className="text-xs font-semibold tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">
                         100% PARITY
                       </span>
                     </div>

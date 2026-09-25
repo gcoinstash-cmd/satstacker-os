@@ -247,13 +247,13 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
           <div className="bg-zinc-900/90 border border-zinc-800 p-3 rounded-full mb-3 shadow-lg shadow-indigo-500/10">
             <Lock className="text-indigo-400 animate-pulse" size={20} />
           </div>
-          <span className="text-[10px] uppercase tracking-widest text-indigo-400 font-extrabold px-2.5 py-1 bg-indigo-950/50 border border-indigo-900/60 rounded-full mb-3">
+          <span className="text-xs font-semibold tracking-wider uppercase tracking-widest text-indigo-400 font-extrabold px-2.5 py-1 bg-indigo-950/50 border border-indigo-900/60 rounded-full mb-3">
             Upgrade to Premium to unlock real-time price alerts
           </span>
 
           {/* Bulleted vertical feature stack mapping the premium tiers */}
-          <div className="w-full max-w-[280px] text-left text-[10px] font-mono space-y-1.5 mb-5 bg-zinc-950/60 border border-zinc-850 p-3 rounded-xl">
-            <div className="text-[9.5px] text-zinc-500 uppercase tracking-wider mb-1 font-black">Premium Edition Features:</div>
+          <div className="w-full max-w-[280px] text-left text-xs font-semibold tracking-wider font-mono space-y-1.5 mb-5 bg-zinc-950/60 border border-zinc-850 p-3 rounded-xl">
+            <div className="text-[9.5px] text-zinc-300 uppercase tracking-wider mb-1 font-black">Premium Edition Features:</div>
             <div className="flex items-start gap-2 text-zinc-300">
               <span className="text-indigo-400 font-black">•</span>
               <span>Release-Grade Shield State Machine</span>
@@ -272,7 +272,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
             </div>
           </div>
 
-          <p className="text-[10px] text-zinc-500 max-w-[280px] mb-4">
+          <p className="text-xs font-semibold tracking-wider text-zinc-300 max-w-[280px] mb-4">
             Continuous price monitoring with customizable sound alerts.
           </p>
           <button 
@@ -292,11 +292,11 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
           <div>
             <div className="flex items-center gap-1.5 text-zinc-400">
               <Bell className="text-indigo-400" size={14} />
-              <span className="text-[10px] font-bold uppercase tracking-widest">
+              <span className="text-xs font-semibold tracking-wider font-bold uppercase tracking-widest">
                 Crypto Price Shield
               </span>
             </div>
-            <p className="text-[10px] text-zinc-500 mt-0.5">Dual-mode background price barrier limits</p>
+            <p className="text-xs font-semibold tracking-wider text-zinc-300 mt-0.5">Dual-mode background price barrier limits</p>
           </div>
 
           <div id="pro-badge-toggle" className="flex items-center gap-2">
@@ -328,7 +328,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
 
         {/* Inline guidance box for Shield Setup */}
         {localHelp && (
-          <div className="bg-indigo-950/20 border border-indigo-900/40 p-4 rounded-2xl mb-4 text-[11px] space-y-3 relative overflow-hidden text-zinc-200 font-mono">
+          <div className="bg-indigo-950/20 border border-indigo-900/40 p-4 rounded-2xl mb-4 text-xs font-semibold space-y-3 relative overflow-hidden text-zinc-200 font-mono">
             <div className="text-[9px] uppercase tracking-widest text-indigo-400 font-bold">Price Barrier Quick Overview</div>
             <div className="space-y-2">
               <div>
@@ -350,12 +350,12 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
         {/* Input Parameters */}
         <div className="space-y-3 mb-4">
           <div>
-            <label className="text-[9px] text-zinc-500 uppercase tracking-wider block mb-1">
+            <label className="text-[9px] text-zinc-300 uppercase tracking-wider block mb-1">
               ALERT THRESHOLD (USD TARGET PRICE)
             </label>
             <div className="flex items-center gap-2">
               <div className="relative flex-1">
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-zinc-500">$</span>
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-zinc-300">$</span>
                 <input
                   type="number"
                   placeholder={livePrice ? Math.round(livePrice).toString() : "67000"}
@@ -367,7 +367,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
                   disabled={shieldState === 'armed' || shieldState === 'triggered' || shieldState === 'saved'}
                   className={`w-full bg-zinc-950/80 border text-xs px-8 py-2 rounded-xl focus:outline-none focus:ring-1 font-mono ${
                     shieldState === 'armed' || shieldState === 'triggered'
-                      ? 'border-zinc-850 text-zinc-500 bg-zinc-900/20' 
+                      ? 'border-zinc-850 text-zinc-300 bg-zinc-900/20' 
                       : 'border-zinc-850 text-zinc-100 focus:ring-indigo-500/50 focus:border-indigo-500'
                   }`}
                 />
@@ -391,12 +391,12 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
                 {alertDirection === 'above' ? (
                   <>
                     <TrendingUp size={12} className="text-emerald-500 animate-pulse" />
-                    <span className="text-[10px] uppercase">Above</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase">Above</span>
                   </>
                 ) : (
                   <>
                     <TrendingDown size={12} className="text-rose-500 animate-pulse" />
-                    <span className="text-[10px] uppercase">Below</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase">Below</span>
                   </>
                 )}
               </button>
@@ -409,7 +409,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
           {/* Dominant Active State Layer */}
           <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-900/60">
             <div>
-              <span className="text-[9px] uppercase tracking-wider text-zinc-500 font-bold block">Active Shield Mode</span>
+              <span className="text-[9px] uppercase tracking-wider text-zinc-300 font-bold block">Active Shield Mode</span>
               <span className={`text-sm font-black uppercase flex items-center gap-1.5 mt-0.5 tracking-wide ${
                 shieldState === 'armed' ? 'text-indigo-400 animate-pulse' :
                 shieldState === 'triggered' ? 'text-rose-400 animate-bounce' :
@@ -437,8 +437,8 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
             </div>
             
             <div className="text-right">
-              <span className="text-[9px] uppercase tracking-wider text-zinc-500 font-bold block">Local Engine</span>
-              <span className="text-[10px] text-zinc-300 font-bold uppercase tracking-wider flex items-center justify-end gap-1 mt-0.5">
+              <span className="text-[9px] uppercase tracking-wider text-zinc-300 font-bold block">Local Engine</span>
+              <span className="text-xs font-semibold tracking-wider text-zinc-300 font-bold uppercase tracking-wider flex items-center justify-end gap-1 mt-0.5">
                 <Database size={10} className="text-zinc-400" />
                 SQLITE
               </span>
@@ -471,7 +471,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
                   <ShieldAlert className="text-rose-400" size={16} />
                 </div>
                 <div>
-                  <div className="text-[10px] font-black text-rose-300 uppercase tracking-wider font-mono">
+                  <div className="text-xs font-semibold tracking-wider font-black text-rose-300 uppercase tracking-wider font-mono">
                     ALERT TRIP: TARGET BROKEN
                   </div>
                   <div className="text-[9px] text-zinc-400 mt-0.5">
@@ -493,7 +493,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
               <div className="flex items-center gap-2">
                 <Hourglass size={14} className="text-sky-400 animate-spin" />
                 <div>
-                  <div className="text-[10px] font-bold text-sky-300 uppercase">Alert Cooldown Active</div>
+                  <div className="text-xs font-semibold tracking-wider font-bold text-sky-300 uppercase">Alert Cooldown Active</div>
                   <div className="text-[9px] text-zinc-400">Muted for {cooldownTimeLeft}s to protect focus.</div>
                 </div>
               </div>
@@ -510,7 +510,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
             <div className="mb-4 bg-emerald-950/30 border border-emerald-900/40 p-3 rounded-xl flex items-center gap-2 font-mono">
               <RefreshCw size={14} className="text-emerald-400 animate-spin" />
               <div>
-                <div className="text-[10px] font-bold text-emerald-300 uppercase">Serializing Configuration...</div>
+                <div className="text-xs font-semibold tracking-wider font-bold text-emerald-300 uppercase">Serializing Configuration...</div>
                 <div className="text-[9px] text-zinc-400">Storing encrypted criteria mapping to localStorage.</div>
               </div>
             </div>
@@ -521,7 +521,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
               <div className="flex items-center gap-2">
                 <XOctagon size={14} className="text-red-400" />
                 <div>
-                  <div className="text-[10px] font-bold text-red-300 uppercase">System Arming Error</div>
+                  <div className="text-xs font-semibold tracking-wider font-bold text-red-300 uppercase">System Arming Error</div>
                   <div className="text-[9.5px] text-red-200 mt-0.5">{errorMessage || "Invalid threshold value."}</div>
                 </div>
               </div>
@@ -535,28 +535,28 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
           )}
 
           {shieldState === 'deleted' && (
-            <div className="mb-4 bg-zinc-950/80 border border-zinc-800 p-3 rounded-xl flex items-center gap-2 font-mono text-[10px] text-zinc-400">
-              <Trash2 size={14} className="text-zinc-500 animate-pulse" />
+            <div className="mb-4 bg-zinc-950/80 border border-zinc-800 p-3 rounded-xl flex items-center gap-2 font-mono text-xs font-semibold tracking-wider text-zinc-400">
+              <Trash2 size={14} className="text-zinc-300 animate-pulse" />
               <span>Purging limit bounds from memory registries...</span>
             </div>
           )}
 
           {shieldState === 'unarmed' && (
-            <div className="mb-4 bg-zinc-950/30 border border-zinc-900 p-2.5 rounded-xl flex items-center gap-1.5 font-mono text-[9px] text-zinc-500">
+            <div className="mb-4 bg-zinc-950/30 border border-zinc-900 p-2.5 rounded-xl flex items-center gap-1.5 font-mono text-[9px] text-zinc-300">
               <ShieldOff size={12} className="text-zinc-600" />
               <span>Price alert inactive. Set a target above to arm limits defense.</span>
             </div>
           )}
 
           {shieldState === 'armed' && (
-            <div className="mb-4 bg-indigo-950/20 border border-indigo-900/35 p-2.5 rounded-xl flex items-center justify-between text-[10px] text-zinc-300">
+            <div className="mb-4 bg-indigo-950/20 border border-indigo-900/35 p-2.5 rounded-xl flex items-center justify-between text-xs font-semibold tracking-wider text-zinc-300">
               <span className="flex items-center gap-1.5 font-mono">
                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-ping" />
                 Shield monitoring boundary for: ${parseFloat(targetPriceInput || '0').toLocaleString()}
               </span>
               <button
                 onClick={handleDeleteAlert}
-                className="text-zinc-500 hover:text-zinc-300 transition-colors uppercase text-[9px] font-bold"
+                className="text-zinc-300 hover:text-zinc-300 transition-colors uppercase text-[9px] font-bold"
               >
                 Disarm
               </button>
@@ -567,7 +567,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
         {/* Live Indicator Panel */}
         <div className="bg-zinc-950/40 border border-zinc-850 p-3 rounded-2xl mb-4 flex items-center justify-between text-xs">
           <div>
-            <span className="text-[9px] text-zinc-500 block uppercase">Continuous Live Price</span>
+            <span className="text-[9px] text-zinc-300 block uppercase">Continuous Live Price</span>
             <span className={`font-mono font-bold text-zinc-200 block mt-0.5 ${activeMode === 'symmetry' ? 'number-snap' : ''}`}>
               {livePrice ? `$${livePrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : "Connecting..."}
             </span>
@@ -577,10 +577,10 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
             <button
               onClick={handleArmShield}
               disabled={!targetPriceInput}
-              className={`px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wider font-black uppercase tracking-wider transition-all cursor-pointer ${
                 targetPriceInput 
                   ? 'bg-indigo-650 hover:bg-indigo-500 text-white hover:scale-[1.01] shadow-lg shadow-indigo-600/20'
-                  : 'bg-zinc-800 text-zinc-500 border border-zinc-750 cursor-not-allowed'
+                  : 'bg-zinc-800 text-zinc-300 border border-zinc-750 cursor-not-allowed'
               }`}
             >
               Arm Price Shield
@@ -588,7 +588,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
           ) : (
             <button
               onClick={handleDeleteAlert}
-              className="px-4 py-2 bg-rose-950/20 hover:bg-rose-950/40 border border-rose-900/40 text-rose-400 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer"
+              className="px-5 py-3 min-h-[44px] bg-rose-950/20 hover:bg-rose-950/40 border border-rose-900/40 text-rose-400 rounded-xl text-base font-semibold min-h-[44px] font-semibold tracking-wider font-black uppercase tracking-wider transition-all cursor-pointer"
             >
               Clear & Purge
             </button>
@@ -597,7 +597,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
 
         {/* ADVANCED MULTI-STATE TEST TRIGGERS (Premium Developer Overlay Panel) */}
         <div className="border-t border-zinc-850/60 pt-3 mb-4">
-          <div className="text-[8.5px] text-zinc-500 uppercase font-bold tracking-widest mb-2 flex items-center gap-1">
+          <div className="text-[8.5px] text-zinc-300 uppercase font-bold tracking-widest mb-2 flex items-center gap-1">
             <Sparkles size={10} className="text-amber-400" />
             <span>Interactive State Sandbox Controls</span>
           </div>
@@ -644,7 +644,7 @@ export function PriceAlertController({ soundEnabled = true, isPremium = false }:
         {/* Micro audit logs from triggers */}
         {triggerHistory.length > 0 && (
           <div className="border-t border-zinc-850 pt-3">
-            <div className="text-[9px] text-zinc-500 uppercase font-black mb-1.5 flex items-center justify-between">
+            <div className="text-[9px] text-zinc-300 uppercase font-black mb-1.5 flex items-center justify-between">
               <span>Shield Alarm Memory Logs</span>
               <button onClick={() => setTriggerHistory([])} className="hover:text-zinc-300 transition-colors uppercase text-[8px]">
                 Flush

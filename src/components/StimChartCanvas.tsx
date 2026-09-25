@@ -429,15 +429,15 @@ export function StimChartCanvas({
           <h3 className="font-bold text-sm text-yellow-400 uppercase tracking-widest flex items-center gap-1">
             <span>Market Volatility Visualizer</span>
           </h3>
-          <p className="text-[10px] text-zinc-500">Continuous high-frequency rendering stress-test</p>
+          <p className="text-xs font-semibold tracking-wider text-zinc-300">Continuous high-frequency rendering stress-test</p>
         </div>
-        <span className="bg-slate-900 border border-slate-800 text-[10px] text-emerald-400 font-mono px-2 py-0.5 rounded-full uppercase tracking-wider">
+        <span className="bg-slate-900 border border-slate-800 text-xs font-semibold tracking-wider text-emerald-400 font-mono px-2 py-0.5 rounded-full uppercase tracking-wider">
           Canvas Live ⚛
         </span>
       </div>
 
       <div className="relative z-10 text-center py-6">
-        <div className="text-[11px] text-zinc-500 uppercase tracking-wide">Current Stack Value</div>
+        <div className="text-xs font-semibold text-zinc-300 uppercase tracking-wide">Current Stack Value</div>
         <div className="text-4xl font-extrabold text-white mt-1 select-none tracking-tight">
           ${(totalBtc * (livePrice || 67420)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         </div>
@@ -445,7 +445,7 @@ export function StimChartCanvas({
 
       <button
         onClick={onStackClick}
-        className="relative z-10 w-full py-3 bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-indigo-600/20 active:translate-y-0.5 transition-all outline-none"
+        className="relative z-10 w-full py-3 bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-black text-base font-semibold min-h-[44px] uppercase tracking-wider rounded-xl shadow-lg shadow-indigo-600/20 active:translate-y-0.5 transition-all outline-none"
       >
         ⚡ Simulate Stack Burst
       </button>

@@ -87,7 +87,7 @@ export default function App() {
 
   useEffect(() => {
     if (
-      window.location.pathname === '/admin' ||
+      (window.location.pathname.includes('admin') || window.location.hash.includes('admin')) ||
       window.location.pathname === '/admin.html' ||
       window.location.hash === '#admin'
     ) {
@@ -5470,7 +5470,7 @@ export default function App() {
         isOpen={isAdminOpen}
         onClose={() => {
           setIsAdminOpen(false);
-          if (window.location.pathname === '/admin' || window.location.pathname === '/admin.html') {
+          if (window.location.pathname.includes('admin') || window.location.hash.includes('admin')) {
             window.history.pushState({}, '', '/');
           }
         }}
